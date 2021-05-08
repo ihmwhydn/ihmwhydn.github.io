@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="scss/custom.css">
+  <link rel="stylesheet" href="scss/custom.css.map">
+  <title>Portfolio Web</title>
+</head>
+<body>
+
+  <div id="app">
+
+    <div id="nav" class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-putih">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+          <ul class="navbar-nav mr-auto">
+            <a class="nav-link pl-2 pl-lg-0" href="#">
+              <div class="d-flex flex-row align-items-center">
+                <div class="mr-2">
+                  <img :src="info.photo" class="rounded-circle z-depth-0"
+                  alt="avatar image" height="50">
+                </div>
+                <div>
+                  <p class="h6 mb-0 font-weight-bold">{{profile.Name}}</p>
+                  <p class="mb-0"><small>{{profile.Job}}</small></p>
+                </div>
+              </div>
+            </a>            
+          </ul>
+          <ul class="navbar-nav">
+            <button type="button" class="btn btn-sm btn-primary font-weight-bold">Portofolio Website</button>
+          </ul>
+        </div>
+        </div>
+      </nav>
+    </div>
+
+    <div id="hero" class="jarak-atas">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-5 mb-5 mb-lg-0">
+            <div class="pesan text-center text-lg-left">
+              <p class="h3">Hello i'm,</p>
+              <h1 class="display-4 font-weight-bold">{{profile.Name}}</h1>
+              <p class="h3">{{profile.Job}}</p>
+            </div>
+            <div class="sosmed text-center text-lg-left mt-5">
+              <p class="h6 font-weight-bold">My Social Account, </p>
+              <div class="d-flex justify-content-center justify-content-lg-start flex-wrap">
+                <div class="mr-2 ml-2 ml-lg-0" v-for="s in social">
+                  <a type="button" :class="['btn btn-sm m-0', s.color]" :href="s.link">
+                    <i :class="['fab', s.icon]"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="resume mt-3">
+                <p class="h6 font-weight-bold">Hire me,</p>
+                <a type="button" class="btn btn-sm btn-primary waves-effect m-0 mr-1" data-toggle="modal" data-target="#basicExampleModal">
+                  <i class="fas fa-envelope"></i> Email
+                </a>
+                <a type="button" class="btn btn-sm btn-outline-primary waves-effect m-0 ml-1" :href="info.cv">
+                  <i class="fas fa-download"></i> CV & Resume
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-7">
+            <img :src="info.heroImage" class="img-fluid" alt="Responsive image">
+          </div>
+        </div>
+        <hr class="hr-custom m-0">
+      </div>
+    </div>
+
+    <div id="portfolio" class="jarak-atas-content">
+      <div class="container">
+        <div class="text-center mb-2">
+          <button type="button" class="btn btn-sm btn-primary font-weight-bold">
+            ALL PROJECTS DESIGN <i class="fas fa-chevron-circle-down"></i>
+          </button>
+          <hr>
+        </div>
+        <div class="owl-carousel owl-theme">
+          <div class="item p-1" v-for="d in design" :key="d.id">
+            <div class="card">
+              <div class="view overlay">
+                <img class="card-img-top" :src="d.img"
+                  alt="Card image cap">
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <span class="badge badge-success mb-3">{{d.label}}</span>
+                <p class="h6 font-weight-bold">{{d.title}}</p>
+                <p class="small">{{d.tools}} <i class="far fa-check-circle text-success"></i></p>
+                <a :href="d.behance" class="btn btn-sm behance-color m-0">
+                  <i class="fab fa-behance"></i> Behance
+                </a>
+                <a :href="d.github" :class="[d.gitclass]">
+                  <i :class="['fab', d.giticon]"></i> {{d.brand}}
+                </a>
+              </div>
+            </div>         
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="profil" class="jarak-atas-content mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4 mb-2 mb-lg-0">
+            <div class="card profil-kirikanan p-4 h-100">
+              <p class="h6 font-weight-bold text-center mb-3">
+                PERSONAL PROFILE <i class="fas fa-check-circle text-success"></i>
+              </p>
+              <div class="row" v-for="(value, name) in profile">
+                <div class="col-4 text-right">
+                  <p class="small mb-1">
+                    <strong>{{name}}</strong>
+                  </p>
+                </div>
+                <div class="col">
+                  <p class="small mb-1">
+                    {{value}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 mb-2 mb-lg-0">
+            <div class="card p-4 profil-transform h-100">
+              <p class="h6 font-weight-bold text-center mb-3">
+                SUMMARY <i class="fas fa-check-circle text-success"></i>
+              </p>
+              <p class="small font-italic ">{{info.summary}}</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 mb-2 mb-lg-0">
+            <div class="card profil-kirikanan p-4 h-100">
+              <p class="h6 font-weight-bold text-center mb-3">
+                SKILLS <i class="fas fa-check-circle text-success"></i>
+              </p>
+              <div class="row" v-for="s in skill">
+                <div class="col-4">
+                  <p class="small text-right mb-0"><strong>{{s.software}}</strong></p>
+                </div>
+                <div class="col">
+                  <div class="progress mb-3">
+                    <div :class="['progress-bar', s.class]" role="progressbar" :aria-valuenow="s.value" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="jarak-atas pt-5 bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4 text-white mb-4">
+            <p class="h6 font-weight-bold mb-3">ABOUT</p>
+            <p class="small text-muted">
+              This Portfolio Website, design by <span class="text-white">ilham w</span> using <span class="text-primary">MDBootstrap</span> for UI, and <span class="text-success">VueJS</span> for fake Data passing, also <span class="text-info">Jquery</span> plugin.
+            </p>
+          </div>
+          <div class="col-12 col-lg-2 text-white mr-lg-auto mb-4">
+            <p class="h6 font-weight-bold mb-3">TOOLS</p>
+            <p class="mb-0"><a href="https://mdbootstrap.com/" class="text-muted"><small>MDBootstrap</small></a></p>
+            <p class="mb-0"><a href="https://vuejs.org/" class="text-muted"><small>VueJS</small></a></p>
+            <p class="mb-0"><a href="https://github.com/OwlCarousel2/OwlCarousel2" class="text-muted"><small>Jquery Owl Carousel</small></a></p>
+          </div>
+          <div class="col-12 col-lg-2 text-white text-lg-right mb-4">
+            <p class="h6 font-weight-bold mb-3">STATUS &nbsp; <i class="fas fa-circle text-danger"></i></p>
+            <p class="small text-muted">On Testing</p>
+          </div>
+        </div>
+      </div>
+      <div class="baner bg-abu py-3">
+        <div class="container">
+          <div class="d-flex flex-row align-items-center">
+            <div class="mr-4">
+              <a href="https://mdbootstrap.com/docs/b4/jquery/" class="text-muted"><i class="fab fa-2x fa-bootstrap"></i></a>
+            </div>
+            <div class="mr-auto">
+              <a href="https://vuejs.org/v2/guide/" class="text-muted"><i class="fab fa-2x fa-vuejs"></i></a>
+            </div>
+            <div>
+              <p class="h6 text-white mb-0">&copy; copright 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal">
+      <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Email</h5>
+          </div>
+          <div class="modal-body p-4">
+            <img :src="email.gambar" class="img-fluid d-block mx-auto mb-4" alt="..." width="150rem"/>
+            <p class="h5 text-center">{{email.akun}}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="js/script.js"></script>
+  <script src="js/data.js"></script>
+</body>
+</html>

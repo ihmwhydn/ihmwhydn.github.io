@@ -1,0 +1,169 @@
+.bg-putih {
+  background-color: white;
+}
+
+.jarak-atas {
+  margin-top: 100px;
+}
+
+.jarak-atas-content {
+  margin-top: 50px;
+}
+
+.hr-custom {
+  border-top: 4px solid #686868;
+  border-radius: 5px;
+}
+
+.nav-tabs {
+  border-bottom: 0;
+}
+
+.nav-tabs .nav-link {
+  border: 0;
+  border-radius: 2px;
+  color: rgba(0, 0, 0, 0.233);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: #4285f4;
+  border: 2px solid #4285f4;
+}
+
+.slick-next::before, .slick-prev::before {
+  color: transparent;
+}
+
+.profil-kirikanan {
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.profil-kirikanan:hover {
+  -webkit-transition: .6s;
+  transition: .6s;
+  background-color: #116cff;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.profil-kirikanan:hover .progress-bar {
+  background-color: #00c851;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.profil-transform {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .6s;
+  transition: .6s;
+  position: relative;
+  z-index: 0;
+}
+
+.profil-transform:hover {
+  -webkit-transition: .6s;
+  transition: .6s;
+  cursor: pointer;
+  background-color: #116cff;
+  color: whitesmoke;
+}
+
+.bg-abu {
+  background-color: #272727;
+}
+
+.github-color {
+  background-color: #333333;
+  color: white;
+}
+
+.github-color:hover {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.behance-color {
+  background-color: #0066ff;
+  color: white;
+}
+
+.behance-color:hover {
+  background-color: #0066ff;
+  color: white;
+}
+
+.linkedin-color {
+  background-color: #0082ca;
+}
+
+.linkedin-color:hover {
+  background-color: #0082ca;
+}
+
+.instagram-color {
+  background-color: #ac2bac;
+  color: white;
+}
+
+.instagram-color:hover {
+  background-color: #ac2bac;
+  color: white;
+}
+
+.twitter-color {
+  background-color: #55acee;
+  color: white;
+}
+
+.twitter-color:hover {
+  background-color: #55acee;
+  color: white;
+}
+
+.xd {
+  width: 65%;
+}
+
+.bootstrap {
+  width: 90%;
+}
+
+.vue {
+  width: 35%;
+}
+
+.progress-bar {
+  background-color: #4285f4;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+@media (min-width: 992px) {
+  .jarak-atas {
+    margin-top: 150px;
+  }
+  .slick-next::before, .slick-prev::before {
+    color: #4285f4;
+  }
+  .profil-transform {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    -webkit-transition: .6s;
+    transition: .6s;
+    position: relative;
+    z-index: 1;
+  }
+  .profil-transform:hover {
+    -webkit-transition: .6s;
+    transition: .6s;
+    cursor: pointer;
+    background-color: #116cff;
+    color: whitesmoke;
+  }
+}
+/*# sourceMappingURL=custom.css.map */
