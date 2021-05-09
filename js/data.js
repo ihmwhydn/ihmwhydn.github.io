@@ -157,7 +157,7 @@ var app = new Vue({
           label: '3D Modelling',
           title: 'She First Step on Earth',
           tools: 'Cinema 4D, Redshift Engine',
-          behance: 'https://www.behance.net/gallery/91233561/Concept-For-Food-Drink-Orders-Mobile-App'
+          behance: 'https://www.behance.net/gallery/105792273/3D-Modelling-She-First-Step-On-Earth'
          },
         { 
           id: 10,
@@ -165,7 +165,7 @@ var app = new Vue({
           label: '3D Modelling',
           title: 'Volumetric Lightning',
           tools: 'Cinema 4D, Redshift Engine',
-          behance: 'https://www.behance.net/gallery/91061661/Re-Design-Scheduler-Alert-Mobile-App'
+          behance: 'https://www.behance.net/gallery/105728241/3D-Modelling-Tress-In-Volumetric-Lightning'
          },
         { 
           id: 11,
@@ -173,7 +173,7 @@ var app = new Vue({
           label: '3D Modelling',
           title: '3D Mi 8 Lite',
           tools: 'Cinema 4D, Redshift Engine',
-          behance: 'https://www.behance.net/gallery/91061661/Re-Design-Scheduler-Alert-Mobile-App'
+          behance: 'https://www.behance.net/gallery/105589397/Phone-3D-Modelling-Xiaomi-Mi-8-Lite'
          }
       ]
     }
