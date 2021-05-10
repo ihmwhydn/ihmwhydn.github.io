@@ -129,10 +129,10 @@ var app = new Vue({
           label: 'Website Design',
           title: 'Cyberpunk Concept',
           tools: 'Bootstrap',
-          gitclass: '',
-          giticon: '',
-          brand: '',
-          github: 'https://github.com/ihmwhydn/web-design-cyberpunktheme',
+          gitclass: 'btn btn-sm github-color m-0',
+          giticon: 'fa-github',
+          brand: 'Demo',
+          github: 'https://ihmwhydn.github.io/cyberpunk-concept-theme/',
           behance: 'https://www.behance.net/gallery/112210629/Website-Cyberpunk-Theme'
          },
          { 
