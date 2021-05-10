@@ -69,10 +69,10 @@ var app = new Vue({
           label: 'Website Design',
           title: 'Phone Store Design',
           tools: 'Bootstrap, VueJS',
-          github: 'https://github.com/ihmwhydn/phone-store-design',
-          gitclass: '',
-          giticon: '',
-          brand: '',
+          github: 'https://ihmwhydn.github.io/phone-store/',
+          gitclass: 'btn btn-sm github-color m-0',
+          giticon: 'fa-github',
+          brand: 'Demo',
           behance: 'https://www.behance.net/gallery/116466429/Phone-Store'
          },
         { 
@@ -81,10 +81,10 @@ var app = new Vue({
           label: 'Website Design',
           title: 'Working Spaces',
           tools: 'Bootstrap, Adobe XD',
-          gitclass: '',
-          giticon: '',
-          brand: '',
-          github: 'https://github.com/ihmwhydn/workingspaces-web-design',
+          gitclass: 'btn btn-sm github-color m-0',
+          giticon: 'fa-github',
+          brand: 'Demo',
+          github: 'https://ihmwhydn.github.io/workspaces-concept/',
           behance: 'https://www.behance.net/gallery/113099597/Work-Spaces-Booking'
          },
         { 
@@ -93,10 +93,10 @@ var app = new Vue({
           label: 'Website Design',
           title: 'Movie Watch',
           tools: 'Bootstrap, Adobe XD',
-          gitclass: '',
-          giticon: '',
-          brand: '',
-          github: 'https://github.com/ihmwhydn/moviewatch-web-design',
+          gitclass: 'btn btn-sm github-color m-0',
+          giticon: 'fa-github',
+          brand: 'Demo',
+          github: 'https://ihmwhydn.github.io/movie-watching/',
           behance: 'https://www.behance.net/gallery/113668915/Website-Watching-Movies-And-TV'
          },
         { 
@@ -105,10 +105,10 @@ var app = new Vue({
           label: 'Website Design',
           title: 'Beasiswa Website',
           tools: 'Bootstrap, Adobe XD',
-          gitclass: '',
-          giticon: '',
-          brand: '',
-          github: 'https://github.com/ihmwhydn/beasiswa-web-concept-design',
+          gitclass: 'btn btn-sm github-color m-0',
+          giticon: 'fa-github',
+          brand: 'Demo',
+          github: 'https://ihmwhydn.github.io/beasiswa-concept/',
           behance: 'https://www.behance.net/gallery/112562131/Konsep-Website-Beasiswa-%28-Scholarship-Website-Concept-%29'
          },
         { 
