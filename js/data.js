@@ -117,10 +117,10 @@ var app = new Vue({
           label: 'Website Design',
           title: 'Bank-Ku',
           tools: 'Bootstrap, Adobe XD',
-          gitclass: '',
-          giticon: '',
-          brand: '',
-          github: 'https://github.com/ihmwhydn/m-banking-webdesign',
+          gitclass: 'btn btn-sm github-color m-0',
+          giticon: 'fa-github',
+          brand: 'Demo',
+          github: 'https://ihmwhydn.github.io/mbanking-website/',
           behance: 'https://www.behance.net/gallery/112855635/M-Banking-Bank-Ku-Website-Concept'
          },
         { 
