@@ -80,7 +80,7 @@ var app = new Vue({
           img: '../img/design/workspaces.png',
           label: 'Website Design',
           title: 'Working Spaces',
-          tools: 'Bootstrap, Adobe XD',
+          tools: 'Bootstrap',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fa-github',
           brand: 'Demo',
