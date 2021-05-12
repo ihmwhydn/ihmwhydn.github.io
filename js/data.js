@@ -48,11 +48,11 @@ var app = new Vue({
       skill: [
         { 
           software: 'Adobe XD',
-          value: '65',
+          value: '55',
           class: 'xd'
         },
         { 
-          software: 'Bootstrap 4',
+          software: 'Bootstrap',
           value: '90',
           class: 'bootstrap'
         },
