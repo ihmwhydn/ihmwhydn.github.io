@@ -138,6 +138,27 @@
     transition: .6s;
   }
 
+.card-bg-profil {
+  background-image: url(../img/topi.png);
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-bg-skill {
+  background-image: url(../img/skill.png);
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-bg-summary {
+  background-image: url(../img/information-button.png);
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @media (min-width: 992px) {
     .jarak-atas {
         margin-top: 150px;
