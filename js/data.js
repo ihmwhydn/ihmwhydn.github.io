@@ -36,7 +36,7 @@ var app = new Vue({
       ],
       profile: {
         Name: 'ilham wahyudin',
-        Job: 'Freelancer Web Designer',
+        Job: 'Freelancer',
         University: 'Gunadarma University',
         Levels: 'Bachelors Degree',
         Majors: 'Informatic Engineer'
