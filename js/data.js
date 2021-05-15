@@ -178,32 +178,30 @@ var app = new Vue({
       ],
       tools: [
         { 
-          id: 1,
           icon: 'fab fa-adobe',
           title: 'Adobe Creative Cloud'
         },
         { 
-          id: 1,
+          icon: 'fab fa-github',
+          title: 'Github'
+        },
+        { 
           icon: 'fab fa-html5',
           title: 'HTML 5'
         },
         { 
-          id: 1,
           icon: 'fab fa-css3-alt',
           title: 'CSS 3'
         },
         { 
-          id: 1,
           icon: 'fab fa-sass',
           title: 'SASS'
         },
         { 
-          id: 1,
           icon: 'fab fa-bootstrap',
           title: 'Bootstrap'
         },
         { 
-          id: 1,
           icon: 'fab fa-vuejs',
           title: 'VueJS'
         },
