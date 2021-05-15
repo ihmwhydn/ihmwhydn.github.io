@@ -175,6 +175,32 @@ var app = new Vue({
           tools: 'Cinema 4D, Redshift Engine',
           behance: 'https://www.behance.net/gallery/105589397/Phone-3D-Modelling-Xiaomi-Mi-8-Lite'
          }
+      ],
+      tools: [
+        { 
+          img: '../img/icon/xd.png',
+          title: 'Adobe XD'
+        },
+        { 
+          img: '../img/icon/html.png',
+          title: 'HTML 5'
+        },
+        { 
+          img: '../img/icon/css.png',
+          title: 'CSS 3'
+        },
+        { 
+          img: '../img/icon/sass.png',
+          title: 'SASS'
+        },
+        { 
+          img: '../img/icon/bootstrap.png',
+          title: 'Bootstrap'
+        },
+        { 
+          img: '../img/icon/vue.png',
+          title: 'Vue JS'
+        }
       ]
     }
   }

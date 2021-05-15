@@ -19,6 +19,12 @@ html body {
   border-radius: 5px;
 }
 
+.hr-custom-2 {
+  border-top: 8px solid #242424;
+  border-radius: 5px;
+  width: 50px;
+}
+
 .nav-tabs {
   border-bottom: 0;
 }
@@ -75,6 +81,21 @@ html body {
   cursor: pointer;
   background-color: #116cff;
   color: whitesmoke;
+}
+
+.img-react {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.img-react:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
 }
 
 .bg-abu {

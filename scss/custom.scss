@@ -19,6 +19,12 @@ html body {
   border-radius: 5px;
 }
 
+.hr-custom-2 {
+  border-top: 8px solid rgb(36, 36, 36);
+  border-radius: 5px;
+  width: 50px;
+}
+
 .nav-tabs {
   border-bottom: 0;
 }
@@ -70,6 +76,17 @@ html body {
   cursor: pointer;
   background-color: #116cff;
   color: whitesmoke;
+}
+
+.img-react {
+  transform: scale(1.0);
+  transition: 1s;
+}
+
+.img-react:hover {
+  transform: scale(1.5);
+  transition: 1s;
+  cursor: pointer;
 }
 
 .bg-abu {
