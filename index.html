@@ -74,7 +74,7 @@
                   <i class="fas fa-envelope"></i> Email
                 </a>
                 <a type="button" class="btn btn-sm btn-outline-primary waves-effect m-0 ml-1 animated fadeInLeft delay-1s" :href="info.cv">
-                  <i class="fas fa-download"></i> CV & Resume
+                  <i class="fas fa-download"></i> Resume
                 </a>
               </div>
             </div>
@@ -85,19 +85,15 @@
             </div>
           </div>
         </div>
-        <hr class="hr-custom m-0">
       </div>
     </div>
 
-    <div id="portfolio" class="jarak-atas-content">
+    <div id="portfolio" class=" bg-porto py-4">
       <div class="container">
-        <div class="text-center mb-2">
-          <button type="button" class="btn btn-sm btn-primary font-weight-bold">
-            DESIGN PIN <i class="fas fa-map-pin"></i>
-          </button>
-          <hr>
+        <div class="text-center mb-4">
+          <h3><strong>Example Design</strong> <span class="badge badge-primary">PIN</span></h3>
         </div>
-        <div class="owl-carousel owl-theme">
+        <div id="design" class="owl-carousel owl-theme">
           <div class="item p-1" v-for="d in design" :key="d.id">
             <div class="card">
               <div class="view overlay">
@@ -126,11 +122,14 @@
 
     <div id="profil" class="jarak-atas-content mb-5">
       <div class="container">
+        <div class="text-center mb-4 mb-lg-5">
+          <h3><strong>Personal</strong> <span class="badge badge-primary">PROFILE</span></h3>
+        </div>
         <div class="row">
           <div class="col-12 col-lg-4 mb-2 mb-lg-0">
             <div class="card card-bg-profil profil-kirikanan p-4 h-100">
               <p class="h6 font-weight-bold text-center mb-3">
-                PERSONAL PROFILE <i class="fas fa-check-circle text-success"></i>
+                IDENTITY <i class="fas fa-check-circle text-success"></i>
               </p>
               <div class="row" v-for="(value, name) in profile">
                 <div class="col-4 col-md-5 col-lg-4 text-right">
@@ -175,7 +174,23 @@
       </div>
     </div>
 
-    <div id="footer" class="jarak-atas pt-5 bg-dark">
+    <div class="jarak-atas bg-porto py-4">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h3><strong>Works</strong> <span class="badge badge-primary">USING</span></h3>
+        </div>
+        <div id="brand" class="owl-carousel owl-theme">
+          <div class="item" v-for="t in tools">
+            <div class="list text-center">
+              <i :class="['fa-5x', t.icon]"></i>
+              <p class="h6 font-weight-bold">{{t.title}}</p>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+
+    <div id="footer" class="pt-5 bg-dark">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-4 text-white mb-4">
@@ -191,7 +206,7 @@
             <p class="mb-0"><a href="https://github.com/OwlCarousel2/OwlCarousel2" class="text-muted"><small>Jquery Owl Carousel</small></a></p>
           </div>
           <div class="col-12 col-lg-2 text-white text-lg-right mb-4">
-            <p class="h6 font-weight-bold mb-3">STATUS &nbsp; <i class="fas fa-circle text-danger"></i></p>
+            <p class="h6 font-weight-bold mb-3">STATUS &nbsp; <i class="fas fa-circle text-danger animated zoomIn infinite"></i></p>
             <p class="small text-muted">On Testing</p>
           </div>
         </div>

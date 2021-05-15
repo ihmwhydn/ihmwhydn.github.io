@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $('.owl-carousel').owlCarousel({
+    $('#design').owlCarousel({
         loop:true,
         margin:10,
         nav:false,
@@ -21,6 +21,25 @@ $(document).ready(function(){
             1200:{
                 items:4
             }
+        }
+    })
+
+    $('#brand').owlCarousel({
+        center: true,
+        items:2,
+        loop:true,
+        margin:10,
+        dots: false,
+        responsive:{
+            0:{
+                items:2
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:4
+            },
         }
     })
 

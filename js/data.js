@@ -178,29 +178,35 @@ var app = new Vue({
       ],
       tools: [
         { 
-          img: '../img/icon/xd.png',
-          title: 'Adobe XD'
+          id: 1,
+          icon: 'fab fa-adobe',
+          title: 'Adobe Creative Cloud'
         },
         { 
-          img: '../img/icon/html.png',
+          id: 1,
+          icon: 'fab fa-html5',
           title: 'HTML 5'
         },
         { 
-          img: '../img/icon/css.png',
+          id: 1,
+          icon: 'fab fa-css3-alt',
           title: 'CSS 3'
         },
         { 
-          img: '../img/icon/sass.png',
+          id: 1,
+          icon: 'fab fa-sass',
           title: 'SASS'
         },
         { 
-          img: '../img/icon/bootstrap.png',
+          id: 1,
+          icon: 'fab fa-bootstrap',
           title: 'Bootstrap'
         },
         { 
-          img: '../img/icon/vue.png',
-          title: 'Vue JS'
-        }
+          id: 1,
+          icon: 'fab fa-vuejs',
+          title: 'VueJS'
+        },
       ]
     }
   }

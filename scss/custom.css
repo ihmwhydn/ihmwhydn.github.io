@@ -11,15 +11,10 @@ html body {
 }
 
 .jarak-atas-content {
-  margin-top: 50px;
+  margin-top: 75px;
 }
 
 .hr-custom {
-  border-top: 4px solid #686868;
-  border-radius: 5px;
-}
-
-.hr-custom-2 {
   border-top: 8px solid #242424;
   border-radius: 5px;
   width: 50px;
@@ -96,6 +91,14 @@ html body {
   -webkit-transition: 1s;
   transition: 1s;
   cursor: pointer;
+}
+
+.list:hover {
+  cursor: pointer;
+}
+
+.bg-porto {
+  background-color: #f0f0f0;
 }
 
 .bg-abu {
