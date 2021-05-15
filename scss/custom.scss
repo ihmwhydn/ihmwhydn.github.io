@@ -1,3 +1,6 @@
+html body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
 .bg-putih {
     background-color: white;
@@ -189,4 +192,10 @@
     .display-4 {
       font-size: 3.5rem;
     }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
 }
