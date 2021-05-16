@@ -60,20 +60,20 @@
               <p class="h5 text-muted animated fadeInLeft">{{profile.Job}}</p>
             </div>
             <div class="sosmed text-center text-lg-left mt-5">
-              <p class="h6 font-weight-bold animated fadeInLeft delay-1s">My Social Account, </p>
+              <p class="h6 font-weight-bold animated fadeInDown delay-1s">My Social Account, </p>
               <div class="d-flex justify-content-center justify-content-lg-start flex-wrap">
-                <div class="mr-2 ml-2 ml-lg-0 animated fadeInLeft delay-1s" v-for="s in social">
+                <div class="mr-2 ml-2 ml-lg-0 animated fadeInDown delay-1s" v-for="s in social">
                   <a type="button" :class="['btn btn-sm m-0', s.color]" :href="s.link">
                     <i :class="['fab', s.icon]"></i>
                   </a>
                 </div>
               </div>
               <div class="resume mt-4">
-                <p class="h6 font-weight-bold animated fadeInLeft delay-1s">Hire me,</p>
-                <a type="button" class="btn btn-sm btn-primary waves-effect m-0 mr-1 animated fadeInLeft delay-1s" data-toggle="modal" data-target="#basicExampleModal">
+                <p class="h6 font-weight-bold animated fadeInUp delay-1s">Hire me,</p>
+                <a type="button" class="btn btn-sm btn-primary waves-effect m-0 mr-1 animated fadeInUp delay-1s" data-toggle="modal" data-target="#basicExampleModal">
                   <i class="fas fa-envelope"></i> Email
                 </a>
-                <a type="button" class="btn btn-sm btn-outline-primary waves-effect m-0 ml-1 animated fadeInLeft delay-1s" :href="info.cv">
+                <a type="button" class="btn btn-sm btn-outline-primary waves-effect m-0 ml-1 animated fadeInUp delay-1s" :href="info.cv">
                   <i class="fas fa-download"></i> Resume
                 </a>
               </div>
