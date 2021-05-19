@@ -65,6 +65,21 @@ var app = new Vue({
       design: [
         { 
           id: 1,
+          img: '../img/design/company.png',
+          label: 'Website Design',
+          title: 'Company Profile',
+          tools: 'Bootstrap, VueJS',
+          github: 'https://ihmwhydn.github.io/company-profile/',
+          gitclass: 'btn btn-sm github-color m-0',
+          giticon: 'fa-github',
+          brand: 'Demo',
+          behance: '',
+          beclass: '',
+          beicon: '',
+          brandb: ''
+         },
+        { 
+          id: 2,
           img: '../img/design/mi8.png',
           label: 'Website Design',
           title: 'Phone Store Design',
@@ -73,10 +88,13 @@ var app = new Vue({
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fa-github',
           brand: 'Demo',
-          behance: 'https://www.behance.net/gallery/116466429/Phone-Store'
+          behance: 'https://www.behance.net/gallery/116466429/Phone-Store',
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance'
          },
         { 
-          id: 2,
+          id: 3,
           img: '../img/design/workspaces.png',
           label: 'Website Design',
           title: 'Working Spaces',
@@ -85,10 +103,13 @@ var app = new Vue({
           giticon: 'fa-github',
           brand: 'Demo',
           github: 'https://ihmwhydn.github.io/workspaces-concept/',
-          behance: 'https://www.behance.net/gallery/113099597/Work-Spaces-Booking'
+          behance: 'https://www.behance.net/gallery/113099597/Work-Spaces-Booking',
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance'
          },
         { 
-          id: 3,
+          id: 4,
           img: '../img/design/film.png',
           label: 'Website Design',
           title: 'Movie Watch',
@@ -97,10 +118,13 @@ var app = new Vue({
           giticon: 'fa-github',
           brand: 'Demo',
           github: 'https://ihmwhydn.github.io/movie-watching/',
-          behance: 'https://www.behance.net/gallery/113668915/Website-Watching-Movies-And-TV'
+          behance: 'https://www.behance.net/gallery/113668915/Website-Watching-Movies-And-TV',
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance'
          },
         { 
-          id: 4,
+          id: 5,
           img: '../img/design/beasiswa.png',
           label: 'Website Design',
           title: 'Beasiswa Website',
@@ -109,10 +133,13 @@ var app = new Vue({
           giticon: 'fa-github',
           brand: 'Demo',
           github: 'https://ihmwhydn.github.io/beasiswa-concept/',
-          behance: 'https://www.behance.net/gallery/112562131/Konsep-Website-Beasiswa-%28-Scholarship-Website-Concept-%29'
+          behance: 'https://www.behance.net/gallery/112562131/Konsep-Website-Beasiswa-%28-Scholarship-Website-Concept-%29',
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance'
          },
         { 
-          id: 5,
+          id: 6,
           img: '../img/design/mbanking.png',
           label: 'Website Design',
           title: 'Bank-Ku',
@@ -121,10 +148,13 @@ var app = new Vue({
           giticon: 'fa-github',
           brand: 'Demo',
           github: 'https://ihmwhydn.github.io/mbanking-website/',
-          behance: 'https://www.behance.net/gallery/112855635/M-Banking-Bank-Ku-Website-Concept'
+          behance: 'https://www.behance.net/gallery/112855635/M-Banking-Bank-Ku-Website-Concept',
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance'
          },
         { 
-          id: 6,
+          id: 7,
           img: '../img/design/cyberpunk.png',
           label: 'Website Design',
           title: 'Cyberpunk Concept',
@@ -133,47 +163,65 @@ var app = new Vue({
           giticon: 'fa-github',
           brand: 'Demo',
           github: 'https://ihmwhydn.github.io/cyberpunk-concept-theme/',
-          behance: 'https://www.behance.net/gallery/112210629/Website-Cyberpunk-Theme'
+          behance: 'https://www.behance.net/gallery/112210629/Website-Cyberpunk-Theme',
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance'
          },
          { 
-          id: 7,
+          id: 8,
           img: '../img/design/drink.png',
           label: 'Mobile App Design',
           title: 'Food & Drink Orders',
           tools: 'Adobe XD',
-          behance: 'https://www.behance.net/gallery/91233561/Concept-For-Food-Drink-Orders-Mobile-App'
+          behance: 'https://www.behance.net/gallery/91233561/Concept-For-Food-Drink-Orders-Mobile-App',
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance'
          },
         { 
-          id: 8,
+          id: 9,
           img: '../img/design/jadwal.png',
           label: 'Mobile App Design',
           title: 'Scheduler Alerts',
           tools: 'Adobe XD',
-          behance: 'https://www.behance.net/gallery/91061661/Re-Design-Scheduler-Alert-Mobile-App'
+          behance: 'https://www.behance.net/gallery/91061661/Re-Design-Scheduler-Alert-Mobile-App',
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance'
          },
          { 
-          id: 9,
+          id: 10,
           img: '../img/design/3dlisa.jpg',
           label: '3D Modelling',
           title: 'She First Step on Earth',
           tools: 'Cinema 4D, Redshift Engine',
-          behance: 'https://www.behance.net/gallery/105792273/3D-Modelling-She-First-Step-On-Earth'
+          behance: 'https://www.behance.net/gallery/105792273/3D-Modelling-She-First-Step-On-Earth',
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance'
          },
         { 
-          id: 10,
+          id: 11,
           img: '../img/design/3dlightning.jpg',
           label: '3D Modelling',
           title: 'Volumetric Lightning',
           tools: 'Cinema 4D, Redshift Engine',
-          behance: 'https://www.behance.net/gallery/105728241/3D-Modelling-Tress-In-Volumetric-Lightning'
+          behance: 'https://www.behance.net/gallery/105728241/3D-Modelling-Tress-In-Volumetric-Lightning',
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance'
          },
         { 
-          id: 11,
+          id: 12,
           img: '../img/design/3dmi8.jpg',
           label: '3D Modelling',
           title: '3D Mi 8 Lite',
           tools: 'Cinema 4D, Redshift Engine',
-          behance: 'https://www.behance.net/gallery/105589397/Phone-3D-Modelling-Xiaomi-Mi-8-Lite'
+          behance: 'https://www.behance.net/gallery/105589397/Phone-3D-Modelling-Xiaomi-Mi-8-Lite',
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance'
          }
       ],
       tools: [

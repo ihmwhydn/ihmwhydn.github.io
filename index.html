@@ -104,8 +104,8 @@
                 <span class="badge badge-success mb-3">{{d.label}}</span>
                 <p class="h6 font-weight-bold">{{d.title}}</p>
                 <p class="small">{{d.tools}} <i class="far fa-check-circle text-success"></i></p>
-                <a :href="d.behance" class="btn btn-sm behance-color m-0">
-                  <i class="fab fa-behance"></i> Behance
+                <a :href="d.behance" :class="[d.beclass]">
+                  <i :class="['fab', d.beicon]"></i> {{d.brandb}}
                 </a>
                 <a :href="d.github" :class="[d.gitclass]">
                   <i :class="['fab', d.giticon]"></i> {{d.brand}}
