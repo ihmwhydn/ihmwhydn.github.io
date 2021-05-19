@@ -7,7 +7,7 @@ html body {
 }
 
 .jarak-atas {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .jarak-atas-content {
@@ -183,6 +183,21 @@ html body {
 
 .display-4 {
   font-size: 2.5rem;
+}
+
+#modal-2 {
+  .modal-dialog {
+    .modal-content {
+      box-shadow: none;
+      background-color: transparent;
+    }
+  }
+}
+
+#modal-2 {
+  .fade {
+    background-color: rgba(0, 0, 0, 0.623);
+  }
 }
 
 @media (min-width: 992px) {

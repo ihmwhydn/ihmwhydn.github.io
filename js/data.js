@@ -74,9 +74,11 @@ var app = new Vue({
           giticon: 'fa-github',
           brand: 'Demo',
           behance: '',
-          beclass: '',
-          beicon: '',
-          brandb: ''
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance',
+          toggle: 'modal',
+          target: '#basicExampleModal-2'
          },
         { 
           id: 2,

@@ -20,7 +20,7 @@
 
   <div id="app">
 
-    <div id="nav" class="fixed-top">
+    <div id="nav" class="sticky-top">
       <nav class="navbar navbar-expand-lg navbar-light bg-putih">
         <div class="container">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -50,7 +50,7 @@
       </nav>
     </div>
 
-    <div id="hero" class=" jarak-atas">
+    <div id="hero" class="jarak-atas">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-5 mb-5 mb-lg-0">
@@ -104,7 +104,7 @@
                 <span class="badge badge-success mb-3">{{d.label}}</span>
                 <p class="h6 font-weight-bold">{{d.title}}</p>
                 <p class="small">{{d.tools}} <i class="far fa-check-circle text-success"></i></p>
-                <a :href="d.behance" :class="[d.beclass]">
+                <a :href="d.behance" :class="[d.beclass]" :data-toggle="d.toggle" :data-target="d.target">
                   <i :class="['fab', d.beicon]"></i> {{d.brandb}}
                 </a>
                 <a :href="d.github" :class="[d.gitclass]">
@@ -243,6 +243,20 @@
         </div>
       </div>
     </div>
+    </div>
+
+    <div id="modal-2">
+      <div class="modal fade" id="basicExampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="./img/notif.png" class="img-fluid" alt="Responsive image">
+              <p class="h3 text-white text-center font-weight-light mt-5">Sorry, <span class="font-weight-bold">Behance</span> Page Not Available For This Content</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
