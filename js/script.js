@@ -1,13 +1,12 @@
 $(document).ready(function(){
 
     $('#design').owlCarousel({
-        loop:true,
+        loop:false,
         margin:10,
         nav:false,
         autoplay:true,
         autoplayTimeout:5000,
-        autoplayHoverPause:true,
-        rewind: true,
+        rewind:true,
         responsive:{
             0:{
                 items:1
