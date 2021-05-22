@@ -200,6 +200,21 @@ html body {
   }
 }
 
+#modal-3 {
+  .modal-dialog {
+    .modal-content {
+      box-shadow: none;
+      background-color: transparent;
+    }
+  }
+}
+
+#modal-3 {
+  .fade {
+    background-color: rgba(0, 0, 0, 0.623);
+  }
+}
+
 @media (min-width: 992px) {
     .jarak-atas {
         margin-top: 150px;

@@ -229,7 +229,7 @@ var app = new Vue({
           beicon: 'fa-behance',
           brandb: 'Behance',
           toggleb: 'modal',
-          targetb: '#basicExampleModal-2',          
+          targetb: '#basicExampleModal-3',          
           badgeclass: 'badge badge-success'
          },
         { 
@@ -246,7 +246,7 @@ var app = new Vue({
           beicon: 'fa-behance',
           brandb: 'Behance',
           toggleb: 'modal',
-          targetb: '#basicExampleModal-2',          
+          targetb: '#basicExampleModal-3',          
           badgeclass: 'badge badge-success'
          }
       ],
