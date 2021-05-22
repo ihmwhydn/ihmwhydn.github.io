@@ -101,14 +101,15 @@
                 </a>
               </div>
               <div class="card-body">
-                <span :class="['mr-2 mb-3', d.badgeclass]">{{d.label}}</span>
+                <span :class="['mr-1 mb-3', d.badgeclass]">{{d.label}}</span>
+                <span :class="['mr-1 mb-3', d.badgeclass]">{{d.labelb}}</span>
                 <p class="h6 font-weight-bold">{{d.title}}</p>
                 <p class="small">{{d.tools}} <i class="far fa-check-circle text-success"></i></p>
                 <a :href="d.behance" :class="[d.beclass]" :data-toggle="d.toggle" :data-target="d.target">
                   <i :class="['fab', d.beicon]"></i> {{d.brandb}}
                 </a>
-                <a :href="d.github" :class="[d.gitclass]">
-                  <i :class="['fab', d.giticon]"></i> {{d.brand}}
+                <a :href="d.github" :class="[d.gitclass]" :data-toggle="d.toggleb" :data-target="d.targetb">
+                  <i :class="d.giticon"></i> {{d.brand}}
                 </a>
               </div>
             </div>         
@@ -252,7 +253,7 @@
           <div class="modal-content">
             <div class="modal-body">
               <img src="./img/notif.png" class="img-fluid" alt="Responsive image">
-              <p class="h3 text-white text-center font-weight-light mt-5">Sorry, <span class="font-weight-bold">Behance</span> Page Not Available For This Content</p>
+              <p class="h3 text-white text-center font-weight-light mt-5"><span class="font-weight-bold">Behance</span> Page Not Available For This Design</p>
             </div>
           </div>
         </div>
@@ -261,7 +262,7 @@
 
   </div>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>

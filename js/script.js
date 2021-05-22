@@ -6,6 +6,7 @@ $(document).ready(function(){
         nav:false,
         autoplay:true,
         autoplayTimeout:5000,
+        autoplayHoverPause: true,
         rewind:true,
         responsive:{
             0:{
@@ -17,7 +18,7 @@ $(document).ready(function(){
             992:{
                 items:3
             },
-            1200:{
+            1400:{
                 items:4
             }
         }
