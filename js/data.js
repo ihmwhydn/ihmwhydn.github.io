@@ -78,7 +78,8 @@ var app = new Vue({
           beicon: 'fa-behance',
           brandb: 'Behance',
           toggle: 'modal',
-          target: '#basicExampleModal-2'
+          target: '#basicExampleModal-2',
+          badgeclass: 'badge badge-success'
          },
         { 
           id: 2,
@@ -93,7 +94,8 @@ var app = new Vue({
           behance: 'https://www.behance.net/gallery/116466429/Phone-Store',
           beclass: 'btn btn-sm behance-color m-0',
           beicon: 'fa-behance',
-          brandb: 'Behance'
+          brandb: 'Behance',
+          badgeclass: 'badge badge-success'
          },
         { 
           id: 3,
@@ -108,7 +110,8 @@ var app = new Vue({
           behance: 'https://www.behance.net/gallery/113099597/Work-Spaces-Booking',
           beclass: 'btn btn-sm behance-color m-0',
           beicon: 'fa-behance',
-          brandb: 'Behance'
+          brandb: 'Behance',
+          badgeclass: 'badge badge-success'
          },
         { 
           id: 4,
@@ -123,7 +126,8 @@ var app = new Vue({
           behance: 'https://www.behance.net/gallery/113668915/Website-Watching-Movies-And-TV',
           beclass: 'btn btn-sm behance-color m-0',
           beicon: 'fa-behance',
-          brandb: 'Behance'
+          brandb: 'Behance',
+          badgeclass: 'badge badge-success'
          },
         { 
           id: 5,
@@ -138,7 +142,8 @@ var app = new Vue({
           behance: 'https://www.behance.net/gallery/112562131/Konsep-Website-Beasiswa-%28-Scholarship-Website-Concept-%29',
           beclass: 'btn btn-sm behance-color m-0',
           beicon: 'fa-behance',
-          brandb: 'Behance'
+          brandb: 'Behance',
+          badgeclass: 'badge badge-success'
          },
         { 
           id: 6,
@@ -153,7 +158,8 @@ var app = new Vue({
           behance: 'https://www.behance.net/gallery/112855635/M-Banking-Bank-Ku-Website-Concept',
           beclass: 'btn btn-sm behance-color m-0',
           beicon: 'fa-behance',
-          brandb: 'Behance'
+          brandb: 'Behance',
+          badgeclass: 'badge badge-success'
          },
         { 
           id: 7,
@@ -168,7 +174,8 @@ var app = new Vue({
           behance: 'https://www.behance.net/gallery/112210629/Website-Cyberpunk-Theme',
           beclass: 'btn btn-sm behance-color m-0',
           beicon: 'fa-behance',
-          brandb: 'Behance'
+          brandb: 'Behance',
+          badgeclass: 'badge badge-success'
          },
          { 
           id: 8,
@@ -179,7 +186,8 @@ var app = new Vue({
           behance: 'https://www.behance.net/gallery/91233561/Concept-For-Food-Drink-Orders-Mobile-App',
           beclass: 'btn btn-sm behance-color m-0',
           beicon: 'fa-behance',
-          brandb: 'Behance'
+          brandb: 'Behance',
+          badgeclass: 'badge badge-success'
          },
         { 
           id: 9,
@@ -190,40 +198,8 @@ var app = new Vue({
           behance: 'https://www.behance.net/gallery/91061661/Re-Design-Scheduler-Alert-Mobile-App',
           beclass: 'btn btn-sm behance-color m-0',
           beicon: 'fa-behance',
-          brandb: 'Behance'
-         },
-         { 
-          id: 10,
-          img: '../img/design/3dlisa.jpg',
-          label: '3D Modelling',
-          title: 'She First Step on Earth',
-          tools: 'Cinema 4D, Redshift Engine',
-          behance: 'https://www.behance.net/gallery/105792273/3D-Modelling-She-First-Step-On-Earth',
-          beclass: 'btn btn-sm behance-color m-0',
-          beicon: 'fa-behance',
-          brandb: 'Behance'
-         },
-        { 
-          id: 11,
-          img: '../img/design/3dlightning.jpg',
-          label: '3D Modelling',
-          title: 'Volumetric Lightning',
-          tools: 'Cinema 4D, Redshift Engine',
-          behance: 'https://www.behance.net/gallery/105728241/3D-Modelling-Tress-In-Volumetric-Lightning',
-          beclass: 'btn btn-sm behance-color m-0',
-          beicon: 'fa-behance',
-          brandb: 'Behance'
-         },
-        { 
-          id: 12,
-          img: '../img/design/3dmi8.jpg',
-          label: '3D Modelling',
-          title: '3D Mi 8 Lite',
-          tools: 'Cinema 4D, Redshift Engine',
-          behance: 'https://www.behance.net/gallery/105589397/Phone-3D-Modelling-Xiaomi-Mi-8-Lite',
-          beclass: 'btn btn-sm behance-color m-0',
-          beicon: 'fa-behance',
-          brandb: 'Behance'
+          brandb: 'Behance',
+          badgeclass: 'badge badge-success'
          }
       ],
       tools: [

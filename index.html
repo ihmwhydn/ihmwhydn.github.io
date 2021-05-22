@@ -101,7 +101,7 @@
                 </a>
               </div>
               <div class="card-body">
-                <span class="badge badge-success mb-3">{{d.label}}</span>
+                <span :class="['mr-2 mb-3', d.badgeclass]">{{d.label}}</span>
                 <p class="h6 font-weight-bold">{{d.title}}</p>
                 <p class="small">{{d.tools}} <i class="far fa-check-circle text-success"></i></p>
                 <a :href="d.behance" :class="[d.beclass]" :data-toggle="d.toggle" :data-target="d.target">
