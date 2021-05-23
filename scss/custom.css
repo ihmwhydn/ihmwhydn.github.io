@@ -153,6 +153,16 @@ html body {
   color: white;
 }
 
+.study-color {
+  background-color: #ff9900;
+  color: white;
+}
+
+.study-color:hover {
+  background-color: #dd8500;
+  color: white;
+}
+
 .xd {
   width: 55%;
 }
