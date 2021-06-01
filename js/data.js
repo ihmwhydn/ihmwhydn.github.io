@@ -99,12 +99,12 @@ var app = new Vue({
          },
         { 
           id: 3,
-          img: '../img/design/jaktv.png',
+          img: '../img/design/rsupf.png',
           label: 'Website Design',
           labelb: 'Case Study',
-          title: 'Re-Design JakTV',
+          title: 'Re-Design RSUP Fatmawati',
           tools: 'UX Wireframe, Code Based Prototype',
-          github: 'https://ihmwhydn.github.io/study-case-jaktv/',
+          github: 'https://ihmwhydn.github.io/study-case-rsupf/',
           gitclass: 'btn btn-sm study-color m-0',
           giticon: 'fas fa-chalkboard-teacher',
           brand: 'Case Study',
@@ -132,17 +132,17 @@ var app = new Vue({
           brandb: 'Behance',
           badgeclass: 'badge badge-success'
          },
-        { 
+         { 
           id: 5,
-          img: '../img/design/peruri.png',
+          img: '../img/design/jaktv.png',
           label: 'Website Design',
           labelb: 'Case Study',
-          title: 'Re-Design Peruri',
+          title: 'Re-Design JakTV',
           tools: 'UX Wireframe, Code Based Prototype',
+          github: 'https://ihmwhydn.github.io/study-case-jaktv/',
           gitclass: 'btn btn-sm study-color m-0',
           giticon: 'fas fa-chalkboard-teacher',
           brand: 'Case Study',
-          github: 'https://ihmwhydn.github.io/study-case-peruri/',
           behance: '',
           beclass: 'btn btn-sm behance-color m-0',
           beicon: 'fa-behance',
@@ -167,8 +167,27 @@ var app = new Vue({
           brandb: 'Behance',
           badgeclass: 'badge badge-success'
          },
-        { 
+         { 
           id: 7,
+          img: '../img/design/peruri.png',
+          label: 'Website Design',
+          labelb: 'Case Study',
+          title: 'Re-Design Peruri',
+          tools: 'UX Wireframe, Code Based Prototype',
+          gitclass: 'btn btn-sm study-color m-0',
+          giticon: 'fas fa-chalkboard-teacher',
+          brand: 'Case Study',
+          github: 'https://ihmwhydn.github.io/study-case-peruri/',
+          behance: '',
+          beclass: 'btn btn-sm behance-color m-0',
+          beicon: 'fa-behance',
+          brandb: 'Behance',
+          toggle: 'modal',
+          target: '#basicExampleModal-2',
+          badgeclass: 'badge badge-success'
+         },
+        { 
+          id: 8,
           img: '../img/design/beasiswa.png',
           label: 'Website Design',
           title: 'Beasiswa Website',
@@ -184,7 +203,7 @@ var app = new Vue({
           badgeclass: 'badge badge-success'
          },
         { 
-          id: 8,
+          id: 9,
           img: '../img/design/mbanking.png',
           label: 'Website Design',
           title: 'Bank-Ku',
@@ -200,7 +219,7 @@ var app = new Vue({
           badgeclass: 'badge badge-success'
          },
         { 
-          id: 9,
+          id: 10,
           img: '../img/design/cyberpunk.png',
           label: 'Website Design',
           title: 'Cyberpunk Concept',
@@ -216,7 +235,7 @@ var app = new Vue({
           badgeclass: 'badge badge-success'
          },
          { 
-          id: 10,
+          id: 11,
           img: '../img/design/drink.png',
           label: 'Mobile App Design',
           title: 'Food & Drink Orders',
@@ -233,7 +252,7 @@ var app = new Vue({
           badgeclass: 'badge badge-success'
          },
         { 
-          id: 11,
+          id: 12,
           img: '../img/design/jadwal.png',
           label: 'Mobile App Design',
           title: 'Scheduler Alerts',
