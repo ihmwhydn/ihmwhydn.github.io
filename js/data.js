@@ -10,7 +10,7 @@ var app = new Vue({
         behance: 'https://www.behance.net/ilhamw',
         twitter: 'https://twitter.com/ilhamwahyudin_',
         instagram: 'https://www.instagram.com/ilhamwhydinn/',
-        summary: 'Freeelancer Website Designer, Focused in responsive Web Design. Proficient in Web Mockup Design and Web Design Framework, including Bootstrap CSS Framework and VueJS Javascript Framework.'
+        summary: 'Freeelancer Web Designer, Focused for responsive Web Design. Proficient in Wireframing design and Code-base design using Bootstrap UI Framework, and less skill in VueJS.'
       },
       social: [
         { 
