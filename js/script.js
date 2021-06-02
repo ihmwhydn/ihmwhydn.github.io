@@ -5,12 +5,11 @@ $(document).ready(function(){
         margin:10,
         nav:false,
         autoplay:true,
-        autoplayTimeout:5000,
         autoplayHoverPause: true,
         rewind:true,
         responsive:{
             0:{
-                items:1
+                items:1,
             },
             768:{
                 items:2
@@ -41,5 +40,14 @@ $(document).ready(function(){
             },
         }
     })
+
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 82){
+          $(".navbar").removeClass('shadow-none').addClass('shadow');
+        } else{
+          $(".navbar").removeClass('shadow').addClass('shadow-none');
+        }
+      })
 
 });

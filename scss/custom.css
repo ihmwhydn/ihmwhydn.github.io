@@ -2,6 +2,11 @@ html body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.shadow-none, .shadow {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .bg-putih {
   background-color: white;
 }
@@ -228,7 +233,7 @@ html body {
 
 @media (min-width: 992px) {
   .jarak-atas {
-    margin-top: 150px;
+    margin-top: 75px;
   }
   .slick-next::before, .slick-prev::before {
     color: #4285f4;
