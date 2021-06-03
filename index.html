@@ -92,7 +92,7 @@
         </div>
         <div id="design" class="owl-carousel owl-theme">
           <div class="item p-1" v-for="d in design" :key="d.id">
-            <div class="card shadow-sm">
+            <div class="card shadow-sm text-center text-lg-left">
               <div class="view overlay">
                 <img class="card-img-top" :src="d.img"
                   alt="Card image cap">
@@ -105,7 +105,7 @@
                 <span :class="['mr-1 mb-3', d.badgeclass]">{{d.labelb}}</span>
                 <p class="h6 font-weight-bold">{{d.title}}</p>
                 <p class="small">{{d.tools}} <i class="far fa-check-circle text-success"></i></p>
-                <a :href="d.behance" :class="[d.beclass]" :data-toggle="d.toggle" :data-target="d.target">
+                <a :href="d.behance" :class="['mr-2', d.beclass]" :data-toggle="d.toggle" :data-target="d.target">
                   <i :class="['fab', d.beicon]"></i> {{d.brandb}}
                 </a>
                 <a :href="d.github" :class="[d.gitclass]" :data-toggle="d.toggleb" :data-target="d.targetb">
@@ -148,7 +148,7 @@
               <p class="h6 font-weight-bold text-center mb-3">
                 SUMMARY <i class="fas fa-check-circle text-success"></i>
               </p>
-              <p class="small">{{info.summary}}</p>
+              <p class="small text-center">{{info.summary}}</p>
             </div>
           </div>
           <div class="col-12 col-lg-4 mb-2 mb-lg-0">
@@ -190,27 +190,27 @@
 
     <div id="footer" class="pt-5 bg-dark">
       <div class="container">
-        <div class="row">
+        <div class="row text-center text-lg-left">
           <div class="col-12 col-lg-4 text-white mb-4">
-            <p class="h6 font-weight-bold mb-3">ABOUT</p>
-            <p class="small text-muted">
+            <p class="h6 font-weight-bold mb-2">ABOUT</p>
+            <p class="small text-muted mb-0">
               This Portfolio Website, design using <span class="text-primary">MDBootstrap</span> for UI, and <span class="text-success">VueJS</span> for reactive data render, also <span class="text-info">Jquery</span> plugin.
             </p>
           </div>
           <div class="col-12 col-lg-2 text-white mr-lg-auto mb-4">
-            <p class="h6 font-weight-bold mb-3">TOOLS</p>
+            <p class="h6 font-weight-bold mb-2">TOOLS</p>
             <p class="mb-0"><a href="https://mdbootstrap.com/" class="text-muted"><small>MDBootstrap</small></a></p>
             <p class="mb-0"><a href="https://vuejs.org/" class="text-muted"><small>VueJS</small></a></p>
             <p class="mb-0"><a href="https://github.com/OwlCarousel2/OwlCarousel2" class="text-muted"><small>Jquery Owl Carousel</small></a></p>
           </div>
           <div class="col-12 col-lg-2 text-white text-lg-right mb-4">
-            <p class="h6 font-weight-bold mb-3">STATUS &nbsp; <i class="fas fa-circle text-danger"></i></p>
-            <p class="small text-muted">On Testing</p>
+            <p class="h6 font-weight-bold mb-2">STATUS</p>
+            <p class="small text-muted mb-0">On Testing&nbsp; <i class="fas fa-circle text-danger animated flash infinite slow"></i></p>
           </div>
         </div>
       </div>
       <div class="baner bg-abu py-3">
-        <div class="container">
+        <div class="container align-items-center">
           <div class="d-flex flex-row align-items-center">
             <div class="mr-4">
               <a href="https://mdbootstrap.com/docs/b4/jquery/" class="text-muted"><i class="fab fa-2x fa-bootstrap"></i></a>
@@ -219,7 +219,7 @@
               <a href="https://vuejs.org/v2/guide/" class="text-muted"><i class="fab fa-2x fa-vuejs"></i></a>
             </div>
             <div>
-              <p class="h6 text-white mb-0">&copy; Copyright 2021</p>
+              <p class="small text-muted mb-0">&copy; Copyright 2021</p>
             </div>
           </div>
         </div>

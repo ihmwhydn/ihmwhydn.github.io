@@ -10,6 +10,7 @@ $(document).ready(function(){
         responsive:{
             0:{
                 items:1,
+                autoplay:false
             },
             768:{
                 items:2
