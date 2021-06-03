@@ -45,10 +45,14 @@ $(document).ready(function(){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
         if (scroll > 54){
-          $(".navbar").removeClass('shadow-none').addClass('shadow');
+          $(".navbar").removeClass('shadow-none').addClass('shadow-sm');
         } else{
-          $(".navbar").removeClass('shadow').addClass('shadow-none');
+          $(".navbar").removeClass('shadow-sm').addClass('shadow-none');
         }
       })
+
+      $('.navbar-toggler').click(function(){
+        $('.navbar').toggleClass('shadow-custom');
+      });
 
 });
