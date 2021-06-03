@@ -2,12 +2,13 @@ html body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.shadow-none, .shadow {
-  transition: .3s;
+.shadow-none, .shadow-sm, .shadow, .shadow-lg {
+  transition: .6s;
 }
 
 .shadow-custom {
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  transition: .6s;
 }
 
 .bg-putih {

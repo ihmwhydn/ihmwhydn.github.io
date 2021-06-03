@@ -2,14 +2,16 @@ html body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.shadow-none, .shadow {
-  -webkit-transition: .3s;
-  transition: .3s;
+.shadow-none, .shadow-sm, .shadow, .shadow-lg {
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 .shadow-custom {
   -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
           box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 .bg-putih {
