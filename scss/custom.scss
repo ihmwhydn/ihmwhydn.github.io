@@ -11,6 +11,10 @@ html body {
   transition: .6s;
 }
 
+.padding-custom {
+  padding: 0px 0px;
+}
+
 .bg-putih {
     background-color: white;
 }
@@ -237,6 +241,10 @@ html body {
 @media (min-width: 992px) {
     .jarak-atas {
         margin-top: 150px;
+    }
+
+    .padding-custom {
+      padding: 0px 15px;
     }
 
     .slick-next::before, .slick-prev::before {
