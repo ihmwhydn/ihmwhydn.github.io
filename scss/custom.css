@@ -2,6 +2,28 @@ html body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.navbar-toggler-icon {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navbar-toggler-icon-2 {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navbar.navbar-light .navbar-toggler-icon-2 {
+  cursor: pointer;
+  background-image: url("../img/icon/cancel.png");
+}
+
 .shadow-none, .shadow-sm, .shadow, .shadow-lg {
   -webkit-transition: .6s;
   transition: .6s;

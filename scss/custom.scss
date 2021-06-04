@@ -2,6 +2,26 @@ html body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.navbar-toggler-icon {
+  transition: .3s;
+}
+
+.navbar-toggler-icon-2 {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  transition: .3s;
+}
+
+.navbar.navbar-light .navbar-toggler-icon-2 {
+  cursor: pointer;
+  background-image: url("../img/icon/cancel.png");
+}
+
 .shadow-none, .shadow-sm, .shadow, .shadow-lg {
   transition: .6s;
 }
