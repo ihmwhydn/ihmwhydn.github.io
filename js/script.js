@@ -55,4 +55,9 @@ $(document).ready(function(){
         $('.navbar').toggleClass('shadow-custom');
       });
 
+      $('.second-button').on('click', function () {
+
+        $('.animated-icon2').toggleClass('open');
+      });
+
 });
