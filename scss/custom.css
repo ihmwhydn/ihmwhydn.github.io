@@ -21,7 +21,7 @@ html body {
 
 .navbar.navbar-light .navbar-toggler-icon-2 {
   cursor: pointer;
-  background-image: url("../img/icon/cancel.png");
+  background-image: url("../img/icon/cancel.svg");
 }
 
 .shadow-none, .shadow-sm, .shadow, .shadow-lg {
