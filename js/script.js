@@ -53,7 +53,6 @@ $(document).ready(function(){
 
       $('.navbar-toggler').click(function(){
         $('.navbar').toggleClass('shadow-custom');
-        $('.navbar-toggler span').toggleClass('navbar-toggler-icon-2')
       });
 
 });
