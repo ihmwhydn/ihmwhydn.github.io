@@ -1,8 +1,10 @@
 $(document).ready(function(){
 
+    new WOW().init();
+
     $('#design').owlCarousel({
         loop:false,
-        margin:10,
+        margin:0,
         nav:false,
         autoplay:true,
         autoplayHoverPause: true,

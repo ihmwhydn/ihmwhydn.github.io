@@ -83,14 +83,68 @@
       </div>
     </div>
 
-    <div id="portfolio" class=" bg-porto py-4">
+    <div id="profil" class="bg-porto mb-5 pt-5 padding-bawah">
+      <div class="container">
+        <div class="text-center mb-4 mb-lg-5">
+          <h3><strong>Personal</strong> <span class="badge badge-primary animated flash infinite slow">PROFILE</span></h3>
+        </div>
+        <div class="row">
+          <div class="col-12 col-xl-4 mb-2 mb-xl-0">
+            <div class="card card-bg-profil profil-kirikanan p-4 h-100">
+              <p class="h6 font-weight-bold text-center mb-3">
+                IDENTITY <i class="fas fa-check-circle text-success"></i>
+              </p>
+              <div class="row" v-for="(value, name) in profile">
+                <div class="col-4 col-md-5 col-lg-4 text-right">
+                  <p class="small mb-1">
+                    <strong>{{name}}</strong>
+                  </p>
+                </div>
+                <div class="col-8 col-md-7 col-lg-8">
+                  <p class="small mb-1">
+                    {{value}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-4 mb-2 mb-xl-0">
+            <div class="card card-bg-summary p-4 profil-transform h-100">
+              <p class="h6 font-weight-bold text-center mb-3">
+                SUMMARY <i class="fas fa-check-circle text-success"></i>
+              </p>
+              <p class="small text-center">{{info.summary}}</p>
+            </div>
+          </div>
+          <div class="col-12 col-xl-4 mb-2 mb-xl-0">
+            <div class="card card-bg-skill profil-kirikanan p-4 h-100">
+              <p class="h6 font-weight-bold text-center mb-3">
+                SKILLS <i class="fas fa-check-circle text-success"></i>
+              </p>
+              <div class="row" v-for="s in skill">
+                <div class="col-4 col-md-2 col-lg-4">
+                  <p class="small text-right mb-0"><strong>{{s.software}}</strong></p>
+                </div>
+                <div class="col-8 col-md-10 col-lg-8">
+                  <div class="progress mb-3">
+                    <div :class="['progress-bar', s.class]" role="progressbar" :aria-valuenow="s.value" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="portfolio" class="mb-5">
       <div class="container">
         <div class="text-center mb-4">
           <h3><strong>Example Design</strong> <span class="badge badge-primary animated flash infinite slow">PIN</span></h3>
         </div>
         <div id="design" class="owl-carousel owl-theme">
-          <div class="item p-1" v-for="d in design" :key="d.id">
-            <div class="card shadow-sm text-center text-lg-left">
+          <div class="item p-2" v-for="d in design" :key="d.id">
+            <div class="card text-center text-lg-left">
               <div class="view overlay">
                 <img class="card-img-top" :src="d.img"
                   alt="Card image cap">
@@ -116,61 +170,110 @@
       </div>
     </div>
 
-    <div id="profil" class="jarak-atas-content mb-5">
+    <div class="work-method bg-porto py-5">
       <div class="container">
-        <div class="text-center mb-4 mb-lg-5">
-          <h3><strong>Personal</strong> <span class="badge badge-primary animated flash infinite slow">PROFILE</span></h3>
+        <div class="text-center mb-5">
+          <h3><strong>Working</strong> <span class="badge badge-primary animated flash infinite slow">Method</span></h3>
         </div>
-        <div class="row">
-          <div class="col-12 col-lg-4 mb-2 mb-lg-0">
-            <div class="card card-bg-profil profil-kirikanan p-4 h-100">
-              <p class="h6 font-weight-bold text-center mb-3">
-                IDENTITY <i class="fas fa-check-circle text-success"></i>
+        <div class="row justify-content-between">
+          <div class="col-12 col-lg-5 d-flex align-items-center mb-4 mb-lg-0">
+            <div class="desc w-100 py-5">
+              <p class="h4 font-weight-bold text-center text-lg-left mb-3">
+                <span class="badge badge-primary">1</span> Problem Analyzing <i class="far fa-check-circle text-success"></i>
               </p>
-              <div class="row" v-for="(value, name) in profile">
-                <div class="col-4 col-md-5 col-lg-4 text-right">
-                  <p class="small mb-1">
-                    <strong>{{name}}</strong>
-                  </p>
-                </div>
-                <div class="col-8 col-md-7 col-lg-8">
-                  <p class="small mb-1">
-                    {{value}}
-                  </p>
-                </div>
-              </div>
+              <p class="h5 text-center text-lg-left mb-0">
+                Analyzing User Interface and solving it if there is a problem in layout and responsiveness, because it can be bad for the user experience.
+              </p>
             </div>
           </div>
-          <div class="col-12 col-lg-4 mb-2 mb-lg-0">
-            <div class="card card-bg-summary p-4 profil-transform h-100">
-              <p class="h6 font-weight-bold text-center mb-3">
-                SUMMARY <i class="fas fa-check-circle text-success"></i>
+          <div class="col-12 col-lg-5 d-flex align-items-center">
+            <img src="img/analyze.svg" class="img-fluid" alt="Responsive image">
+          </div>
+        </div>
+        <hr class="my-5 hr-custom">
+        <div class="row justify-content-between">
+          <div class="col-12 col-lg-5 d-flex align-items-center mb-4 mb-lg-0">
+            <img src="img/wireframe.svg" class="img-fluid" alt="Responsive image">
+          </div>
+          <div class="col-12 col-lg-5 d-flex align-items-center">
+            <div class="desc w-100 py-5">
+              <p class="h4 font-weight-bold text-center text-lg-left mb-3">
+                <span class="badge badge-primary">2</span> Wireframing <i class="far fa-check-circle text-success"></i>
               </p>
-              <p class="small text-center">{{info.summary}}</p>
+              <p class="h5 text-center text-lg-left mb-0">
+                Creating new layout using Low-Fidelity design as a Blueprint sample layout structure.
+              </p>
             </div>
           </div>
-          <div class="col-12 col-lg-4 mb-2 mb-lg-0">
-            <div class="card card-bg-skill profil-kirikanan p-4 h-100">
-              <p class="h6 font-weight-bold text-center mb-3">
-                SKILLS <i class="fas fa-check-circle text-success"></i>
+        </div>
+        <hr class="my-5 hr-custom">
+        <div class="row justify-content-between">
+          <div class="col-12 col-lg-5 d-flex align-items-center mb-4 mb-lg-0">
+            <div class="desc w-100 py-5">
+              <p class="h4 font-weight-bold text-center text-lg-left mb-3">
+                <span class="badge badge-primary">3</span> Assets Selection <i class="far fa-check-circle text-success"></i>
               </p>
-              <div class="row" v-for="s in skill">
-                <div class="col-4 col-md-2 col-lg-4">
-                  <p class="small text-right mb-0"><strong>{{s.software}}</strong></p>
-                </div>
-                <div class="col-8 col-md-10 col-lg-8">
-                  <div class="progress mb-3">
-                    <div :class="['progress-bar', s.class]" role="progressbar" :aria-valuenow="s.value" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
+              <p class="h5 text-center text-lg-left mb-0">
+                Create, collecting, and grouping the assets, like a image, icon, color based, font style, etc. 
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 d-flex align-items-center">
+            <img src="img/asset.svg" class="img-fluid" alt="Responsive image">
+          </div>
+        </div>
+        <hr class="my-5 hr-custom">
+        <div class="row justify-content-between">
+          <div class="col-12 col-lg-5 d-flex align-items-center mb-4 mb-lg-0">
+            <img src="img/code.svg" class="img-fluid" alt="Responsive image">
+          </div>
+          <div class="col-12 col-lg-5 d-flex align-items-center">
+            <div class="desc w-100 py-5">
+              <p class="h4 font-weight-bold text-center text-lg-left mb-3">
+                <span class="badge badge-primary">4</span> Transform To Code <i class="far fa-check-circle text-success"></i>
+              </p>
+              <p class="h5 text-center text-lg-left mb-0">
+                Transform Mockup or Wireframe to code using HTML/CSS/JS UI Framework like a Bootstrap, Materialize, Bulma, etc.
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr class="my-5 hr-custom">
+        <div class="row justify-content-between">
+          <div class="col-12 col-lg-5 d-flex align-items-center mb-4 mb-lg-0">
+            <div class="desc w-100 py-5">
+              <p class="h4 font-weight-bold text-center text-lg-left mb-3">
+                <span class="badge badge-primary">5</span> Beta Testing <i class="far fa-check-circle text-success"></i>
+              </p>
+              <p class="h5 text-center text-lg-left mb-0">
+                After developing using code, then i'm testing this code based prototype to user for get feedback, and report if find bug in interface. 
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 d-flex align-items-center">
+            <img src="img/testing.svg" class="img-fluid" alt="Responsive image">
+          </div>
+        </div>
+        <hr class="my-5 hr-custom">
+        <div class="row justify-content-between">
+          <div class="col-12 col-lg-5 d-flex align-items-center mb-4 mb-lg-0">
+            <img src="img/done.svg" class="img-fluid" alt="Responsive image">
+          </div>
+          <div class="col-12 col-lg-5 d-flex align-items-center">
+            <div class="desc w-100 py-5">
+              <p class="h4 font-weight-bold text-center text-lg-left mb-3">
+                <span class="badge badge-primary">6</span> Finish and Goals <i class="far fa-check-circle text-success"></i>
+              </p>
+              <p class="h5 text-center text-lg-left mb-0">
+                Get a reward after finishing this design.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="jarak-atas bg-porto py-4">
+    <div class="work-tool bg-white my-5">
       <div class="container padding-custom">
         <div class="text-center mb-4">
           <h3><strong>Works</strong> <span class="badge badge-primary animated flash infinite slow">USING</span></h3>
@@ -196,7 +299,7 @@
             </p>
           </div>
           <div class="col-12 col-lg-2 text-white mr-lg-auto mb-4">
-            <p class="h6 font-weight-bold mb-2">TOOLS</p>
+            <p class="h6 font-weight-bold mb-2">FRAMEWORK & PLUGIN</p>
             <p class="mb-0"><a href="https://mdbootstrap.com/" class="text-muted"><small>MDBootstrap</small></a></p>
             <p class="mb-0"><a href="https://vuejs.org/" class="text-muted"><small>VueJS</small></a></p>
             <p class="mb-0"><a href="https://github.com/OwlCarousel2/OwlCarousel2" class="text-muted"><small>Jquery Owl Carousel</small></a></p>

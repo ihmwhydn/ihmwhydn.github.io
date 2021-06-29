@@ -82,6 +82,10 @@ html body {
   padding: 0px 0px;
 }
 
+.padding-bawah {
+  padding-bottom: 65px;
+}
+
 .bg-putih {
   background-color: white;
 }
@@ -95,9 +99,9 @@ html body {
 }
 
 .hr-custom {
-  border-top: 8px solid #242424;
+  border-top: 2px solid #999999;
   border-radius: 5px;
-  width: 50px;
+  width: 100%;
 }
 
 .nav-tabs {
@@ -116,10 +120,6 @@ html body {
   color: white;
   background-color: #4285f4;
   border: 2px solid #4285f4;
-}
-
-.slick-next::before, .slick-prev::before {
-  color: transparent;
 }
 
 .profil-kirikanan {
@@ -178,7 +178,7 @@ html body {
 }
 
 .bg-porto {
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
 }
 
 .bg-abu {
@@ -306,6 +306,11 @@ html body {
   background-color: rgba(0, 0, 0, 0.623);
 }
 
+.desc {
+  background-image: none;
+  background-position: 0;
+}
+
 @media (min-width: 992px) {
   .jarak-atas {
     margin-top: 150px;
@@ -313,12 +318,9 @@ html body {
   .padding-custom {
     padding: 0px 15px;
   }
-  .slick-next::before, .slick-prev::before {
-    color: #4285f4;
-  }
   .profil-transform {
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     -webkit-transition: .6s;
     transition: .6s;
     position: relative;
@@ -333,6 +335,32 @@ html body {
   }
   .display-4 {
     font-size: 3.5rem;
+  }
+  .desc {
+    background-image: url(../img/bg-tema.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+  .padding-bawah {
+    padding-bottom: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profil-transform {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    -webkit-transition: .6s;
+    transition: .6s;
+    position: relative;
+    z-index: 1;
+  }
+  .profil-transform:hover {
+    -webkit-transition: .6s;
+    transition: .6s;
+    cursor: pointer;
+    background-color: #116cff;
+    color: whitesmoke;
   }
 }
 

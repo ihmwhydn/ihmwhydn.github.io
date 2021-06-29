@@ -73,6 +73,10 @@ html body {
   padding: 0px 0px;
 }
 
+.padding-bawah {
+  padding-bottom: 65px;
+}
+
 .bg-putih {
     background-color: white;
 }
@@ -86,9 +90,9 @@ html body {
 }
 
 .hr-custom {
-  border-top: 8px solid rgb(36, 36, 36);
+  border-top: 2px solid rgb(153, 153, 153);
   border-radius: 5px;
-  width: 50px;
+  width: 100%;
 }
 .nav-tabs {
   border-bottom: 0;
@@ -106,10 +110,6 @@ html body {
   color: white;
   background-color: #4285f4;
   border: 2px solid #4285f4;
-}
-
-.slick-next::before, .slick-prev::before {
-  color: transparent;
 }
 
 .profil-kirikanan {
@@ -159,7 +159,7 @@ html body {
 }
 
 .bg-porto {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
 }
 
 .bg-abu {
@@ -296,6 +296,11 @@ html body {
   }
 }
 
+.desc {
+  background-image: none;
+  background-position: 0;
+}
+
 @media (min-width: 992px) {
     .jarak-atas {
         margin-top: 150px;
@@ -305,12 +310,8 @@ html body {
       padding: 0px 15px;
     }
 
-    .slick-next::before, .slick-prev::before {
-      color: #4285f4;
-    }
-
     .profil-transform{
-      transform: scale(1.25);
+      transform: scale(1.0);
       transition: .6s;
       position: relative;
       z-index: 1;
@@ -326,6 +327,33 @@ html body {
     .display-4 {
       font-size: 3.5rem;
     }
+
+    .desc {
+      background-image: url(../img/bg-tema.png);
+      background-repeat: no-repeat;
+      background-position: top right;
+    }
+
+    .padding-bawah {
+      padding-bottom: 100px;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+  .profil-transform{
+    transform: scale(1.25);
+    transition: .6s;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .profil-transform:hover {
+    transition: .6s;
+    cursor: pointer;
+    background-color: #116cff;
+    color: whitesmoke;
+  }
 }
 
 @media (min-width: 1400px) {
