@@ -236,11 +236,7 @@ var app = new Vue({
         { 
           icon: 'fab fa-bootstrap',
           title: 'Bootstrap'
-        },
-        { 
-          icon: 'fab fa-vuejs',
-          title: 'VueJS'
-        },
+        }
       ]
     }
   }
