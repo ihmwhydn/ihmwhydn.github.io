@@ -57,8 +57,8 @@ var app = new Vue({
           class: 'bootstrap'
         },
         { 
-          software: 'JS Framework',
-          value: '30',
+          software: 'UX Reserach',
+          value: '40',
           class: 'vue'
         }
       ],
@@ -68,7 +68,7 @@ var app = new Vue({
           img: '../img/design/company.png',
           label: 'Website Design',
           title: 'Company Profile',
-          tools: 'Code Based Prototype',
+          tools: 'Bootstrap Prototype',
           github: 'https://ihmwhydn.github.io/company-profile/',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
@@ -86,7 +86,7 @@ var app = new Vue({
           img: '../img/design/mi8.png',
           label: 'Website Design',
           title: 'Phone Store Design',
-          tools: 'Code Based Prototype',
+          tools: 'Bootstrap Prototype',
           github: 'https://ihmwhydn.github.io/phone-store/',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
@@ -97,31 +97,12 @@ var app = new Vue({
           brandb: 'Behance',
           badgeclass: 'badge badge-success'
          },
-        { 
+         { 
           id: 3,
-          img: '../img/design/rsupf.png',
-          label: 'Website Design',
-          labelb: 'Case Study',
-          title: 'Re-Design RSUP Fatmawati',
-          tools: 'UX Wireframe, Code Based Prototype',
-          github: 'https://ihmwhydn.github.io/study-case-rsupf/',
-          gitclass: 'btn btn-sm study-color m-0',
-          giticon: 'fas fa-chalkboard-teacher',
-          brand: 'Case Study',
-          behance: '',
-          beclass: 'btn btn-sm behance-color m-0',
-          beicon: 'fa-behance',
-          brandb: 'Behance',
-          toggle: 'modal',
-          target: '#basicExampleModal-2',
-          badgeclass: 'badge badge-success'
-         },
-        { 
-          id: 4,
           img: '../img/design/workspaces.png',
           label: 'Website Design',
           title: 'Working Spaces',
-          tools: 'Code Based Prototype',
+          tools: 'Bootstrap Prototype',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
           brand: 'Live Demo',
@@ -133,30 +114,11 @@ var app = new Vue({
           badgeclass: 'badge badge-success'
          },
          { 
-          id: 5,
-          img: '../img/design/jaktv.png',
-          label: 'Website Design',
-          labelb: 'Case Study',
-          title: 'Re-Design JakTV',
-          tools: 'UX Wireframe, Code Based Prototype',
-          github: 'https://ihmwhydn.github.io/study-case-jaktv/',
-          gitclass: 'btn btn-sm study-color m-0',
-          giticon: 'fas fa-chalkboard-teacher',
-          brand: 'Case Study',
-          behance: '',
-          beclass: 'btn btn-sm behance-color m-0',
-          beicon: 'fa-behance',
-          brandb: 'Behance',
-          toggle: 'modal',
-          target: '#basicExampleModal-2',
-          badgeclass: 'badge badge-success'
-         },
-        { 
-          id: 6,
+          id: 4,
           img: '../img/design/film.png',
           label: 'Website Design',
           title: 'Movie Watch',
-          tools: 'UX Wireframe, Code Based Prototype',
+          tools: 'UX Wireframe, Bootstrap Prototype',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
           brand: 'Live Demo',
@@ -168,30 +130,11 @@ var app = new Vue({
           badgeclass: 'badge badge-success'
          },
          { 
-          id: 7,
-          img: '../img/design/peruri.png',
-          label: 'Website Design',
-          labelb: 'Case Study',
-          title: 'Re-Design Peruri',
-          tools: 'UX Wireframe, Code Based Prototype',
-          gitclass: 'btn btn-sm study-color m-0',
-          giticon: 'fas fa-chalkboard-teacher',
-          brand: 'Case Study',
-          github: 'https://ihmwhydn.github.io/study-case-peruri/',
-          behance: '',
-          beclass: 'btn btn-sm behance-color m-0',
-          beicon: 'fa-behance',
-          brandb: 'Behance',
-          toggle: 'modal',
-          target: '#basicExampleModal-2',
-          badgeclass: 'badge badge-success'
-         },
-        { 
-          id: 8,
+          id: 5,
           img: '../img/design/beasiswa.png',
           label: 'Website Design',
           title: 'Beasiswa Website',
-          tools: 'UX Wireframe, Code Based Prototype',
+          tools: 'UX Wireframe, Bootstrap Prototype',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
           brand: 'Live Demo',
@@ -203,11 +146,11 @@ var app = new Vue({
           badgeclass: 'badge badge-success'
          },
         { 
-          id: 9,
+          id: 6,
           img: '../img/design/mbanking.png',
           label: 'Website Design',
           title: 'Bank-Ku',
-          tools: 'UX Wireframe, Code Based Prototype',
+          tools: 'UX Wireframe, Bootstrap Prototype',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
           brand: 'Live Demo',
@@ -219,11 +162,11 @@ var app = new Vue({
           badgeclass: 'badge badge-success'
          },
         { 
-          id: 10,
+          id: 7,
           img: '../img/design/cyberpunk.png',
           label: 'Website Design',
           title: 'Cyberpunk Concept',
-          tools: 'Code Based Prototype',
+          tools: 'Bootstrap Prototype',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
           brand: 'Live Demo',
@@ -235,7 +178,7 @@ var app = new Vue({
           badgeclass: 'badge badge-success'
          },
          { 
-          id: 11,
+          id: 8,
           img: '../img/design/drink.png',
           label: 'Mobile App Design',
           title: 'Food & Drink Orders',
@@ -252,7 +195,7 @@ var app = new Vue({
           badgeclass: 'badge badge-success'
          },
         { 
-          id: 12,
+          id: 9,
           img: '../img/design/jadwal.png',
           label: 'Mobile App Design',
           title: 'Scheduler Alerts',
