@@ -10,7 +10,7 @@ var app = new Vue({
         behance: 'https://www.behance.net/ilhamw',
         twitter: 'https://twitter.com/ilhamwahyudin_',
         instagram: 'https://www.instagram.com/ilhamwhydinn/',
-        summary: 'Freeelancer Web Designer, Focused for responsive Web Design. Proficient in Wireframing design and transforming Mockup to HTML/CSS Prototype using UI Framework like a Bootstrap, Materialize, Bulma, etc.'
+        summary: 'Freeelancer Web Designer, Focused for responsive Web Design. Proficient in Wireframing design and transforming Mockup to HTML, CSS, JS Prototype using UI Framework like a Bootstrap, Materialize, Bulma, etc.'
       },
       social: [
         { 
@@ -37,7 +37,6 @@ var app = new Vue({
       profile: {
         Name: 'ilham wahyudin',
         Job: 'Freelancer',
-        University: 'Gunadarma University',
         Levels: 'Bachelors Degree',
         Majors: 'Informatic Engineer'
       },
@@ -57,7 +56,7 @@ var app = new Vue({
           class: 'bootstrap'
         },
         { 
-          software: 'UX Reserach',
+          software: 'UX Research',
           value: '40',
           class: 'vue'
         }
@@ -68,7 +67,7 @@ var app = new Vue({
           img: '../img/design/company.png',
           label: 'Website Design',
           title: 'Company Profile',
-          tools: 'Bootstrap Prototype',
+          tools: 'Rapid Prototyping',
           github: 'https://ihmwhydn.github.io/company-profile/',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
@@ -86,7 +85,7 @@ var app = new Vue({
           img: '../img/design/mi8.png',
           label: 'Website Design',
           title: 'Phone Store Design',
-          tools: 'Bootstrap Prototype',
+          tools: 'Rapid Prototyping',
           github: 'https://ihmwhydn.github.io/phone-store/',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
@@ -102,7 +101,7 @@ var app = new Vue({
           img: '../img/design/workspaces.png',
           label: 'Website Design',
           title: 'Working Spaces',
-          tools: 'Bootstrap Prototype',
+          tools: 'Rapid Prototyping',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
           brand: 'Live Demo',
@@ -118,7 +117,7 @@ var app = new Vue({
           img: '../img/design/film.png',
           label: 'Website Design',
           title: 'Movie Watch',
-          tools: 'UX Wireframe, Bootstrap Prototype',
+          tools: 'UX Wireframe, Rapid Prototyping',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
           brand: 'Live Demo',
@@ -134,7 +133,7 @@ var app = new Vue({
           img: '../img/design/beasiswa.png',
           label: 'Website Design',
           title: 'Beasiswa Website',
-          tools: 'UX Wireframe, Bootstrap Prototype',
+          tools: 'UX Wireframe, Rapid Prototyping',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
           brand: 'Live Demo',
@@ -150,7 +149,7 @@ var app = new Vue({
           img: '../img/design/mbanking.png',
           label: 'Website Design',
           title: 'Bank-Ku',
-          tools: 'UX Wireframe, Bootstrap Prototype',
+          tools: 'UX Wireframe, Rapid Prototyping',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
           brand: 'Live Demo',
@@ -166,7 +165,7 @@ var app = new Vue({
           img: '../img/design/cyberpunk.png',
           label: 'Website Design',
           title: 'Cyberpunk Concept',
-          tools: 'Bootstrap Prototype',
+          tools: 'Rapid Prototyping',
           gitclass: 'btn btn-sm github-color m-0',
           giticon: 'fas fa-eye',
           brand: 'Live Demo',
@@ -232,6 +231,10 @@ var app = new Vue({
         { 
           icon: 'fab fa-sass',
           title: 'SASS'
+        },
+        { 
+          icon: 'fab fa-vuejs',
+          title: 'Vue JS'
         },
         { 
           icon: 'fab fa-bootstrap',
