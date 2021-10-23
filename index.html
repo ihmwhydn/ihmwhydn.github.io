@@ -42,7 +42,7 @@
               </a>            
             </ul>
             <ul class="navbar-nav">
-              <button type="button" class="btn btn-sm btn-dark"><code class="text-white text-lowercase">$ cd portfolio/ilham-wahyudin <span class="animated flash infinite slow">|</span></code></button>
+              <button type="button" class="btn btn-dark"><code class="text-white text-lowercase">$ cd portfolio/ilham-wahyudin <span class="animated flash infinite slow">|</span></code></button>
             </ul>
           </div>
         </div>
@@ -60,16 +60,16 @@
             <div class="sosmed text-center text-lg-left mt-5">
               <p class="h6 font-weight-bold animated fadeInDown delay-1s">My Social Account, </p>
               <div class="d-flex justify-content-center justify-content-lg-start flex-wrap">
-                <div class="mr-2 ml-2 ml-lg-0 animated fadeInDown delay-1s" v-for="s in social">
-                  <a type="button" :class="['btn btn-sm m-0', s.color]" :href="s.link">
-                    <i :class="['fab', s.icon]"></i>
+                <div class="mr-2 ml-2 ml-lg-0 p-2 p-lg-0 animated fadeInDown delay-1s" v-for="s in social">
+                  <a type="button" :class="['btn m-0', s.color]" :href="s.link">
+                    <i :class="['fab fa-lg', s.icon]"></i>
                   </a>
                 </div>
               </div>
               <div class="resume mt-4">
                 <p class="h6 font-weight-bold animated fadeInUp delay-1s">Email,</p>
-                <a type="button" class="btn btn-sm btn-primary waves-effect m-0 mr-1 animated fadeInUp delay-1s" data-toggle="modal" data-target="#basicExampleModal">
-                  <i class="fas fa-envelope"></i> Email
+                <a type="button" class="btn btn-primary waves-effect m-0 mr-1 animated fadeInUp delay-1s" data-toggle="modal" data-target="#basicExampleModal">
+                  <i class="fas fa-lg fa-envelope"></i> &nbsp; Gmail
                 </a>
               </div>
             </div>
@@ -96,12 +96,12 @@
               </p>
               <div class="row" v-for="(value, name) in profile">
                 <div class="col-4 col-md-5 col-lg-4 text-right">
-                  <p class="small mb-1">
+                  <p class="small small-custom mb-1">
                     <strong>{{name}}</strong>
                   </p>
                 </div>
                 <div class="col-8 col-md-7 col-lg-8">
-                  <p class="small mb-1">
+                  <p class="small small-custom mb-1">
                     {{value}}
                   </p>
                 </div>
@@ -113,7 +113,7 @@
               <p class="h6 font-weight-bold text-center mb-3">
                 SUMMARY <i class="fas fa-check-circle text-success"></i>
               </p>
-              <p class="small text-center">{{info.summary}}</p>
+              <p class="small small-custom text-center">{{info.summary}}</p>
             </div>
           </div>
           <div class="col-12 col-xl-4 mb-2 mb-xl-0">
@@ -123,7 +123,7 @@
               </p>
               <div class="row" v-for="s in skill">
                 <div class="col-4 col-md-2 col-lg-4">
-                  <p class="small text-right mb-0"><strong>{{s.software}}</strong></p>
+                  <p class="small small-custom text-right mb-0"><strong>{{s.software}}</strong></p>
                 </div>
                 <div class="col-8 col-md-10 col-lg-8">
                   <div class="progress mb-3">

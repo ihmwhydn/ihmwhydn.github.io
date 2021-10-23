@@ -2,6 +2,10 @@ html body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.small-custom {
+  font-size: 95%;
+}
+
 .animated-icon2 {
   width: 30px;
   height: 20px;
@@ -252,7 +256,7 @@ html body {
 }
 
 .vue {
-  width: 30%;
+  width: 40%;
 }
 
 .progress-bar {
@@ -343,6 +347,9 @@ html body {
   }
   .padding-bawah {
     padding-bottom: 100px;
+  }
+  .small-custom {
+    font-size: 85%;
   }
 }
 
