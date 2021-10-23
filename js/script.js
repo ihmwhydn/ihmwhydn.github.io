@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     $('#design').owlCarousel({
         loop:false,
-        margin:0,
+        margin:10,
         nav:false,
         autoplay:true,
         autoplayHoverPause: true,
@@ -21,7 +21,7 @@ $(document).ready(function(){
                 items:3
             },
             1400:{
-                items:4
+                items:5
             }
         }
     })
