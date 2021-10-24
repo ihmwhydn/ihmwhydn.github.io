@@ -60,7 +60,7 @@
             <div class="sosmed text-center text-lg-left mt-5">
               <p class="h6 font-weight-bold animated fadeInDown delay-1s">My Social Account, </p>
               <div class="d-flex justify-content-center justify-content-lg-start flex-wrap">
-                <div class="mr-2 ml-2 ml-lg-0 p-2 p-lg-0 animated fadeInDown delay-1s" v-for="s in social">
+                <div class="mr-2 ml-2 ml-lg-0 p-2 p-xl-0 animated fadeInDown delay-1s" v-for="s in social">
                   <a type="button" :class="['btn m-0', s.color]" :href="s.link">
                     <i :class="['fab fa-lg', s.icon]"></i>
                   </a>
@@ -95,12 +95,12 @@
                 IDENTITY <i class="fas fa-check-circle text-success"></i>
               </p>
               <div class="row" v-for="(value, name) in profile">
-                <div class="col-4 col-md-5 col-lg-4 text-right">
+                <div class="col-4 col-md-5 col-lg-6 col-xl-4 text-right">
                   <p class="small small-custom mb-1">
                     <strong>{{name}}</strong>
                   </p>
                 </div>
-                <div class="col-8 col-md-7 col-lg-8">
+                <div class="col-8 col-md-7 col-lg-6 col-xl-8">
                   <p class="small small-custom mb-1">
                     {{value}}
                   </p>
@@ -125,7 +125,7 @@
                 <div class="col-4 col-md-2 col-lg-4">
                   <p class="small small-custom text-right mb-0"><strong>{{s.software}}</strong></p>
                 </div>
-                <div class="col-8 col-md-10 col-lg-8">
+                <div class="col-8 col-md-10 col-lg-6">
                   <div class="progress mb-3">
                     <div :class="['progress-bar', s.class]" role="progressbar" :aria-valuenow="s.value" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>

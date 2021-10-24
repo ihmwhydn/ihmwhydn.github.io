@@ -21,6 +21,9 @@ $(document).ready(function(){
                 items:3
             },
             1400:{
+                items:4
+            },
+            1600:{
                 items:5
             }
         }
