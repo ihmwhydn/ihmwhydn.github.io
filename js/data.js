@@ -229,16 +229,16 @@ var app = new Vue({
           title: 'CSS 3'
         },
         { 
+          icon: 'fab fa-bootstrap',
+          title: 'Bootstrap'
+        },
+        { 
           icon: 'fab fa-sass',
           title: 'SASS'
         },
         { 
           icon: 'fab fa-vuejs',
           title: 'Vue JS'
-        },
-        { 
-          icon: 'fab fa-bootstrap',
-          title: 'Bootstrap'
         }
       ]
     }

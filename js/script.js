@@ -1,51 +1,63 @@
 $(document).ready(function(){
 
+    var swiper1 = new Swiper(".mySwiper-1", {
+        slidesPerView: 1,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        pagination: {
+          el: ".swiper-pagination-1",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1400: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+          1600: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+        },
+      });
+
+      var swiper2 = new Swiper(".mySwiper-2", {
+        loop: true,
+        freeMode: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+          992: {
+            slidesPerView: 5,
+          },
+          1400: {
+            slidesPerView: 7,
+          }
+        },
+      });
+
     new WOW().init();
-
-    $('#design').owlCarousel({
-        loop:false,
-        margin:10,
-        nav:false,
-        autoplay:true,
-        autoplayHoverPause: true,
-        rewind:true,
-        responsive:{
-            0:{
-                items:1,
-                autoplay:false
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            },
-            1400:{
-                items:4
-            },
-            1600:{
-                items:5
-            }
-        }
-    })
-
-    $('#brand').owlCarousel({
-        center: true,
-        loop:true,
-        margin:10,
-        dots: false,
-        responsive:{
-            0:{
-                items:2
-            },
-            768:{
-                items:3
-            },
-            992:{
-                items:4
-            },
-        }
-    })
 
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();

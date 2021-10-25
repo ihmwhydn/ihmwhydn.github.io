@@ -9,8 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
   <link rel="stylesheet" href="scss/custom.css">
   <link rel="stylesheet" href="scss/custom.css.map">
   <link rel="icon" type="image/png" href="img/logo.png">
@@ -142,29 +141,34 @@
         <div class="text-center mb-4">
           <h3><strong>Example Design</strong> <span class="badge badge-primary animated flash infinite slow">PIN</span></h3>
         </div>
-        <div id="design" class="owl-carousel owl-theme">
-          <div class="item p-2" v-for="d in design" :key="d.id">
-            <div class="card text-center text-lg-left">
-              <div class="view overlay">
-                <img class="card-img-top" :src="d.img"
-                  alt="Card image cap">
-                <a href="#!">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <span :class="['mr-1 mb-3', d.badgeclass]">{{d.label}}</span>
-                <span :class="['mr-1 mb-3', d.badgeclass]">{{d.labelb}}</span>
-                <p class="h6 font-weight-bold">{{d.title}}</p>
-                <p class="small small-custom">{{d.tools}} <i class="far fa-check-circle text-success"></i></p>
-                <a :href="d.behance" :class="['mr-2', d.beclass]" :data-toggle="d.toggle" :data-target="d.target">
-                  <i :class="['fab', d.beicon]"></i> {{d.brandb}}
-                </a>
-                <a :href="d.github" :class="[d.gitclass]" :data-toggle="d.toggleb" :data-target="d.targetb">
-                  <i :class="d.giticon"></i> {{d.brand}}
-                </a>
-              </div>
-            </div>         
+        <div class="swiper mySwiper-1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide py-1 px-1" v-for="d in design" :key="d.id">
+              <div class="card text-center text-lg-left">
+                <div class="view overlay">
+                  <img class="card-img-top" :src="d.img"
+                    alt="Card image cap">
+                  <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <span :class="['mr-1 mb-3', d.badgeclass]">{{d.label}}</span>
+                  <span :class="['mr-1 mb-3', d.badgeclass]">{{d.labelb}}</span>
+                  <p class="h6 font-weight-bold">{{d.title}}</p>
+                  <p class="small small-custom">{{d.tools}} <i class="far fa-check-circle text-success"></i></p>
+                  <a :href="d.behance" :class="['mr-2', d.beclass]" :data-toggle="d.toggle" :data-target="d.target">
+                    <i :class="['fab', d.beicon]"></i> {{d.brandb}}
+                  </a>
+                  <a :href="d.github" :class="[d.gitclass]" :data-toggle="d.toggleb" :data-target="d.targetb">
+                    <i :class="d.giticon"></i> {{d.brand}}
+                  </a>
+                </div>
+              </div> 
+            </div>
+          </div>
+          <div id="swp-pagination-1" class="pt-3">
+            <div class="swiper-pagination-1 d-flex justify-content-center"></div>
           </div>
         </div>
       </div>
@@ -278,14 +282,16 @@
         <div class="text-center mb-4">
           <h3><strong>Works</strong> <span class="badge badge-primary animated flash infinite slow">USING</span></h3>
         </div>
-        <div id="brand" class="owl-carousel owl-theme">
-          <div class="item" v-for="t in tools">
-            <div class="list text-center">
-              <i :class="['fa-5x', t.icon]"></i>
-              <p class="h6 font-weight-bold mt-3">{{t.title}}</p>
+        <div class="swiper mySwiper-2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide py-1 px-1" v-for="t in tools">
+              <div class="list text-center">
+                <i :class="['fa-5x', t.icon]"></i>
+                <p class="h6 font-weight-bold mt-3">{{t.title}}</p>
+              </div>
             </div>
           </div>
-      </div>
+        </div>
       </div>
     </div>
 
@@ -295,14 +301,14 @@
           <div class="col-12 col-lg-4 text-white mb-4">
             <p class="h6 font-weight-bold mb-2">ABOUT</p>
             <p class="small text-muted mb-0">
-              This Portfolio Website, design using <span class="text-primary">MDBootstrap</span> for UI, and <span class="text-success">VueJS</span> for reactive data render, also <span class="text-info">Jquery</span> plugin.
+              This Portfolio Website, design using <span class="text-primary">MDBootstrap</span> for UI, and <span class="text-success">VueJS</span> for reactive data render, also <span class="text-danger">Swiper JS</span>.
             </p>
           </div>
           <div class="col-12 col-lg-2 text-white mr-lg-auto mb-4">
             <p class="h6 font-weight-bold mb-2">FRAMEWORK & PLUGIN</p>
             <p class="mb-0"><a href="https://mdbootstrap.com/" class="text-muted"><small>MDBootstrap</small></a></p>
             <p class="mb-0"><a href="https://vuejs.org/" class="text-muted"><small>VueJS</small></a></p>
-            <p class="mb-0"><a href="https://github.com/OwlCarousel2/OwlCarousel2" class="text-muted"><small>Jquery Owl Carousel</small></a></p>
+            <p class="mb-0"><a href="https://swiperjs.com/get-started" class="text-muted"><small>Swiper JS</small></a></p>
           </div>
           <div class="col-12 col-lg-2 text-white text-lg-right mb-4">
             <p class="h6 font-weight-bold mb-2">STATUS</p>
@@ -379,14 +385,13 @@
 
   </div>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-  <script src="js/script.js"></script>
-  <script src="js/data.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
 </body>
 </html>
