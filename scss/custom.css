@@ -1,5 +1,5 @@
 html body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .small-custom {
@@ -13,8 +13,8 @@ html body {
   margin: 0px;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -28,8 +28,8 @@ html body {
   left: 0;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .animated-icon2 span {
@@ -40,7 +40,8 @@ html body {
   top: 0px;
 }
 
-.animated-icon2 span:nth-child(2), .animated-icon2 span:nth-child(3) {
+.animated-icon2 span:nth-child(2),
+.animated-icon2 span:nth-child(3) {
   top: 10px;
 }
 
@@ -70,16 +71,123 @@ html body {
   left: 50%;
 }
 
-.shadow-none, .shadow-sm, .shadow, .shadow-lg {
-  -webkit-transition: .6s;
-  transition: .6s;
+.animated-arrow {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.animated-arrow span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  top: 8px;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.animated-arrow span {
+  background: #0066ff;
+}
+
+.animated-arrow span:nth-child(1) {
+  top: 8px;
+}
+
+.animated-arrow span:nth-child(2) {
+  top: 8px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.animated-arrow.open span:nth-child(1) {
+  top: 11px;
+  width: 0%;
+  left: 50%;
+}
+
+.animated-arrow.open span:nth-child(2) {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.animated-arrow-2 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.animated-arrow-2 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  top: 8px;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.animated-arrow-2 span {
+  background: #0066ff;
+}
+
+.animated-arrow-2 span:nth-child(1) {
+  top: 8px;
+}
+
+.animated-arrow-2 span:nth-child(2) {
+  top: 8px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.animated-arrow-2.open span:nth-child(1) {
+  top: 11px;
+  width: 0%;
+  left: 50%;
+}
+
+.animated-arrow-2.open span:nth-child(2) {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.shadow-none,
+.shadow-sm,
+.shadow,
+.shadow-lg {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .shadow-custom {
   -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
           box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-  -webkit-transition: .6s;
-  transition: .6s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .padding-custom {
@@ -99,7 +207,7 @@ html body {
 }
 
 .jarak-atas-content {
-  margin-top: 75px;
+  margin-top: 35px;
 }
 
 .hr-custom {
@@ -127,13 +235,13 @@ html body {
 }
 
 .profil-kirikanan {
-  -webkit-transition: .6s;
-  transition: .6s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .profil-kirikanan:hover {
-  -webkit-transition: .6s;
-  transition: .6s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   background-color: #116cff;
   color: whitesmoke;
   cursor: pointer;
@@ -141,22 +249,22 @@ html body {
 
 .profil-kirikanan:hover .progress-bar {
   background-color: #00c851;
-  -webkit-transition: .6s;
-  transition: .6s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .profil-transform {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: .6s;
-  transition: .6s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   position: relative;
   z-index: 0;
 }
 
 .profil-transform:hover {
-  -webkit-transition: .6s;
-  transition: .6s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   cursor: pointer;
   background-color: #116cff;
   color: whitesmoke;
@@ -261,8 +369,8 @@ html body {
 
 .progress-bar {
   background-color: #4285f4;
-  -webkit-transition: .6s;
-  transition: .6s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .card-bg-profil {
@@ -324,20 +432,23 @@ html body {
   .jarak-atas {
     margin-top: 150px;
   }
+  .jarak-atas-content {
+    margin-top: 75px;
+  }
   .padding-custom {
     padding: 0px 15px;
   }
   .profil-transform {
     -webkit-transform: scale(1);
             transform: scale(1);
-    -webkit-transition: .6s;
-    transition: .6s;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
     position: relative;
     z-index: 1;
   }
   .profil-transform:hover {
-    -webkit-transition: .6s;
-    transition: .6s;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
     cursor: pointer;
     background-color: #116cff;
     color: whitesmoke;
@@ -362,14 +473,14 @@ html body {
   .profil-transform {
     -webkit-transform: scale(1.25);
             transform: scale(1.25);
-    -webkit-transition: .6s;
-    transition: .6s;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
     position: relative;
     z-index: 1;
   }
   .profil-transform:hover {
-    -webkit-transition: .6s;
-    transition: .6s;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
     cursor: pointer;
     background-color: #116cff;
     color: whitesmoke;

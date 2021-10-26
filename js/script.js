@@ -73,8 +73,23 @@ $(document).ready(function(){
       });
 
       $('.second-button').on('click', function () {
-
         $('.animated-icon2').toggleClass('open');
       });
+
+      $('.acrdn-icn-collpase-1').on('click', function () {
+        $('.animated-arrow').toggleClass('open');
+      });
+
+      $('#collapseOne').on('hide.bs.collapse', function () {
+        $('.animated-arrow').removeClass('open');
+      })
+
+      $('.acrdn-icn-collpase-2').on('click', function () {
+        $('.animated-arrow-2').toggleClass('open');
+      });
+
+      $('#collapseTwo').on('hide.bs.collapse', function () {
+        $('.animated-arrow-2').removeClass('open');
+      })
 
 });

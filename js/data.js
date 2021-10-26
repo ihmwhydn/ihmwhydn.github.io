@@ -229,16 +229,20 @@ var app = new Vue({
           title: 'CSS 3'
         },
         { 
-          icon: 'fab fa-bootstrap',
-          title: 'Bootstrap'
-        },
-        { 
-          icon: 'fab fa-sass',
-          title: 'SASS'
-        },
-        { 
           icon: 'fab fa-vuejs',
           title: 'Vue JS'
+        },
+        { 
+          icon: 'fas fa-database',
+          title: 'MySQL / MariaDB'
+        },
+        { 
+          icon: 'fab fa-windows',
+          title: 'Microsoft Windows Specialist'
+        },
+        { 
+          icon: 'fas fa-microchip',
+          title: 'PC Hardware Specialist'
         }
       ]
     }
