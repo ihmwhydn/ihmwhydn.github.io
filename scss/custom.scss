@@ -65,98 +65,6 @@ html body {
   left: 50%;
 }
 
-.animated-arrow {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  margin: 0px;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-}
-
-.animated-arrow span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  border-radius: 9px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  top: 8px;
-  transition: 0.25s ease-in-out;
-}
-
-.animated-arrow span {
-  background: #0066ff;
-}
-
-.animated-arrow span:nth-child(1) {
-  top: 8px;
-}
-
-.animated-arrow span:nth-child(2) {
-  top: 8px;
-  transform: rotate(90deg);
-}
-
-.animated-arrow.open span:nth-child(1) {
-  top: 11px;
-  width: 0%;
-  left: 50%;
-}
-
-.animated-arrow.open span:nth-child(2) {
-  transform: rotate(0deg);
-}
-
-.animated-arrow-2 {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  margin: 0px;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-}
-
-.animated-arrow-2 span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  border-radius: 9px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  top: 8px;
-  transition: 0.25s ease-in-out;
-}
-
-.animated-arrow-2 span {
-  background: #0066ff;
-}
-
-.animated-arrow-2 span:nth-child(1) {
-  top: 8px;
-}
-
-.animated-arrow-2 span:nth-child(2) {
-  top: 8px;
-  transform: rotate(90deg);
-}
-
-.animated-arrow-2.open span:nth-child(1) {
-  top: 11px;
-  width: 0%;
-  left: 50%;
-}
-
-.animated-arrow-2.open span:nth-child(2) {
-  transform: rotate(0deg);
-}
-
 .shadow-none,
 .shadow-sm,
 .shadow,
@@ -185,7 +93,7 @@ html body {
   margin-top: 100px;
 }
 .jarak-atas-content {
-  margin-top: 35px;
+  margin-top: 0px;
 }
 
 .hr-custom {
@@ -323,15 +231,15 @@ html body {
 }
 
 .xd {
-  width: 70%;
+  width: 65%;
 }
 
 .bootstrap {
-  width: 90%;
+  width: 80%;
 }
 
 .vue {
-  width: 40%;
+  width: 30%;
 }
 
 .progress-bar {

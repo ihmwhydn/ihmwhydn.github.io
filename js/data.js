@@ -10,7 +10,7 @@ var app = new Vue({
         behance: 'https://www.behance.net/ilhamw',
         twitter: 'https://twitter.com/ilhamwahyudin_',
         instagram: 'https://www.instagram.com/ilhamwhydinn/',
-        summary: 'Freeelancer Web Designer, Focused for responsive Web Design. Proficient in Wireframing design and transforming Mockup to HTML, CSS, JS Prototype using UI Framework like a Bootstrap, Materialize, Bulma, etc.'
+        summary: 'Freeelancer Web Designer, Focused for responsive Web Design and transforming Mockup to HTML, CSS, JS Prototype using UI Framework. Also Freelance as a IT Support like Desktop Specialist and PC Hardware Specialist.'
       },
       social: [
         { 
@@ -46,20 +46,36 @@ var app = new Vue({
       },
       skill: [
         { 
-          software: 'Wireframing',
-          value: '70',
+          software: 'Web Design',
+          value: '65',
           class: 'xd'
         },
         { 
-          software: 'Prototyping',
-          value: '90',
+          software: 'IT Supports',
+          value: '80',
           class: 'bootstrap'
         },
         { 
-          software: 'UX Research',
-          value: '40',
+          software: 'Database',
+          value: '30',
           class: 'vue'
         }
+      ],
+      certificated: [
+        {
+          id: 1,
+          img: '../img/bwa.svg',
+          title: 'Build With Angga',
+          desc: 'Full-Stack Website Designer',
+          target: '#basicExampleModal-4'
+        },
+        {
+          id: 2,
+          img: '../img/sql.svg',
+          title: 'Microsoft Technology Associate',
+          desc: 'Database Administration Fundamentals',
+          target: '#basicExampleModal-5'
+        },
       ],
       design: [
         {

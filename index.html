@@ -88,10 +88,10 @@
           <h3><strong>Personal</strong> <span class="badge badge-primary animated flash infinite slow">PROFILE</span></h3>
         </div>
         <div class="row">
-          <div class="col-12 col-xl-4 mb-2 mb-xl-0">
+          <div class="col-12 col-xl-4 mb-4 mb-xl-0">
             <div class="card card-bg-profil profil-kirikanan p-4 h-100">
               <p class="h6 font-weight-bold text-center mb-3">
-                IDENTITY <i class="fas fa-check-circle text-success"></i>
+                <i class="far fa-address-card"></i> IDENTITY
               </p>
               <div class="row" v-for="(value, name) in profile">
                 <div class="col-4 col-md-5 col-lg-6 col-xl-5 text-right">
@@ -107,18 +107,18 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-xl-4 mb-2 mb-xl-0">
+          <div class="col-12 col-xl-4 mb-4 mb-xl-0">
             <div class="card card-bg-summary p-4 profil-transform h-100">
               <p class="h6 font-weight-bold text-center mb-3">
-                SUMMARY <i class="fas fa-check-circle text-success"></i>
+                <i class="fas fa-chalkboard-teacher"></i> SUMMARY
               </p>
               <p class="small small-custom text-center">{{info.summary}}</p>
             </div>
           </div>
-          <div class="col-12 col-xl-4 mb-2 mb-xl-0">
+          <div class="col-12 col-xl-4 mb-4 mb-xl-0">
             <div class="card card-bg-skill profil-kirikanan p-4 h-100">
               <p class="h6 font-weight-bold text-center mb-3">
-                SKILLS <i class="fas fa-check-circle text-success"></i>
+                <i class="fab fa-think-peaks"></i> SKILLS
               </p>
               <div class="row" v-for="s in skill">
                 <div class="col-4 col-md-2 col-lg-4">
@@ -135,52 +135,20 @@
         </div>
         <div class="certifate jarak-atas-content">
           <div class="row">
-            <div class="col-12 col-lg-6 mb-2 mb-lg-0">
-              <div class="accordion" id="accordionExample">
-                <div class="card">
-                  <div class="card-header bg-white" id="headingOne">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link btn-block text-center text-decoration-none font-weight-bold acrdn-icn-collpase-1" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <div class="d-flex flex-row justify-content-center align-items-center">
-                          <div class="acrdn-desc mr-2">
-                            Database Administration Fundamentals Certificated
-                          </div>
-                          <div class="acrdn-icn">
-                            <div class="animated-arrow"><span></span><span></span><span></div>
-                          </div>
-                        </div>
-                      </button>
-                    </h2>
+            <div class="col-12 col-lg-6 mb-4 mb-lg-0" v-for="c in certificated" :key="c.id">
+              <div class="card">
+                <div class="card-body p-0 py-4">
+                  <div class="certif-header px-4">
+                    <img :src="c.img" class="img-fluid d-block mx-auto mb-3" alt="Responsive image" width="50rem">
+                    <h5 class="card-title text-center">{{c.title}}</h5>
                   </div>
-                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <img src="./img/sertif-db 1.png" class="img-fluid shadow-sm" alt="Responsive image">
-                    </div>
+                  <hr>
+                  <div class="certif-body px-4 py-2">
+                    <p class="h6 font-weight-bold mb-0 text-center"><i class="fas fa-check-circle text-success"></i> {{c.desc}}</p>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-6 mb-2 mb-lg-0">
-              <div class="accordion" id="accordionExample">
-                <div class="card">
-                  <div class="card-header bg-white" id="headingTwo">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link btn-block text-center text-decoration-none font-weight-bold acrdn-icn-collpase-2" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                        <div class="d-flex flex-row justify-content-center align-items-center">
-                          <div class="acrdn-desc mr-2">
-                            Full-Stack Website Designer Certificated
-                          </div>
-                          <div class="acrdn-icn">
-                            <div class="animated-arrow-2"><span></span><span></span><span></div>
-                          </div>
-                        </div>
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                      <img src="./img/sertif-ux 1.png" class="img-fluid shadow-sm" alt="Responsive image">
-                    </div>
+                  <hr>
+                  <div class="certif-footer text-center">
+                    <a href="" data-toggle="modal" :data-target="c.target" class="font-weight-bold">See Certificated</a>
                   </div>
                 </div>
               </div>
@@ -435,6 +403,48 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div id="modal-4">
+    <!-- Modal -->
+    <div class="modal fade" id="basicExampleModal-4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Certification</h5>
+          </div>
+          <div class="modal-body">
+            <img src="./img/sertif-ux 1.png" class="img-fluid d-block mx-auto shadow-sm" alt="Responsive image">
+          </div>
+          <div class="modal-footer">
+            <a href="./img/sertif-ux 1.png" class="btn btn-primary" download=""><i class="fas fa-download"></i> &nbsp; Download</a>
+            <a href="" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> &nbsp; Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="modal-5">
+    <!-- Modal -->
+    <div class="modal fade" id="basicExampleModal-5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Certification</h5>
+          </div>
+          <div class="modal-body">
+            <img src="./img/sertif-db 1.png" class="img-fluid d-block mx-auto shadow-sm" alt="Responsive image">
+          </div>
+          <div class="modal-footer">
+            <a href="./img/sertif-db 1.png" class="btn btn-primary" download=""><i class="fas fa-download"></i> &nbsp; Download</a>
+            <a href="" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> &nbsp; Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
 
   </div>
