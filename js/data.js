@@ -10,7 +10,7 @@ var app = new Vue({
         behance: 'https://www.behance.net/ilhamw',
         twitter: 'https://twitter.com/ilhamwahyudin_',
         instagram: 'https://www.instagram.com/ilhamwhydinn/',
-        summary: 'Freeelancer Web Designer, Focused for responsive Web Design and transforming Mockup to HTML, CSS, JS Prototype using UI Framework. Also Freelance as a IT Support like Desktop Specialist and PC Hardware Specialist.'
+        summary: 'Freeelancer Web Designer, Focused for responsive Web Design and transforming Mockup to HTML, CSS, JS Prototype using UI Framework. And little knowledge about Database System and Structure.'
       },
       social: [
         { 
@@ -46,17 +46,17 @@ var app = new Vue({
       },
       skill: [
         { 
-          software: 'Web Design',
+          software: 'Wireframing',
           value: '65',
           class: 'xd'
         },
         { 
-          software: 'IT Supports',
+          software: 'HTML/CSS/JS',
           value: '80',
           class: 'bootstrap'
         },
         { 
-          software: 'Database',
+          software: 'JS Framework',
           value: '30',
           class: 'vue'
         }
