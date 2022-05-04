@@ -19,6 +19,11 @@ var app = new Vue({
           color: 'github-color'
         },
         { 
+          link: 'https://www.linkedin.com/in/ilham-wahyudin-220025195',
+          icon: 'fa-linkedin',
+          color: 'linkedin-color'
+        },
+        { 
           link: 'https://www.behance.net/ilhamw',
           icon: 'fa-behance',
           color: 'behance-color'
@@ -27,11 +32,6 @@ var app = new Vue({
           link: 'https://www.instagram.com/ilhamwhydinn/',
           icon: 'fa-instagram',
           color: 'instagram-color'
-        },
-        { 
-          link: 'https://www.linkedin.com/in/ilham-wahyudin-220025195',
-          icon: 'fa-linkedin',
-          color: 'linkedin-color'
         }
       ],
       profile: {
@@ -251,14 +251,6 @@ var app = new Vue({
         { 
           icon: 'fas fa-database',
           title: 'MySQL / MariaDB'
-        },
-        { 
-          icon: 'fab fa-windows',
-          title: 'Microsoft Windows Specialist'
-        },
-        { 
-          icon: 'fas fa-microchip',
-          title: 'PC Hardware Specialist'
         }
       ]
     }
