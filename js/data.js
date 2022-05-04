@@ -10,7 +10,7 @@ var app = new Vue({
         behance: 'https://www.behance.net/ilhamw',
         twitter: 'https://twitter.com/ilhamwahyudin_',
         instagram: 'https://www.instagram.com/ilhamwhydinn/',
-        summary: 'Freeelancer Web Designer, Focused for responsive Web Design and transforming Mockup to HTML, CSS, JS Prototype using UI Framework. And little knowledge about Database System and Structure.'
+        summary: 'Freeelancer Web Designer, Focused for responsive Web Design and transforming Mockup to HTML, CSS, JS Prototype using UI Framework like Bootstrap, Foundation, Bulma, etc.'
       },
       social: [
         { 
@@ -24,19 +24,19 @@ var app = new Vue({
           color: 'behance-color'
         },
         { 
-          link: 'https://twitter.com/ilhamwahyudinnn',
-          icon: 'fa-twitter',
-          color: 'twitter-color'
-        },
-        { 
           link: 'https://www.instagram.com/ilhamwhydinn/',
           icon: 'fa-instagram',
           color: 'instagram-color'
+        },
+        { 
+          link: 'https://www.linkedin.com/in/ilham-wahyudin-220025195',
+          icon: 'fa-linkedin',
+          color: 'linkedin-color'
         }
       ],
       profile: {
         Name: 'ilham wahyudin',
-        Job: 'Freelancer',
+        Job: 'Freelancer Web Designer & Developer',
         Levels: 'Bachelors Degree',
         Majors: 'Informatic Engineer'
       },

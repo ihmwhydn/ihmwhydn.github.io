@@ -241,6 +241,16 @@ html body {
   color: white;
 }
 
+.linkedin-color {
+  background-color: #4682b4;
+  color: white;
+}
+
+.linkedin-color:hover {
+  background-color: #4682b4;
+  color: white;
+}
+
 .study-color {
   background-color: #ff9900;
   color: white;
