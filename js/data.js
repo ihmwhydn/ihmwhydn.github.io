@@ -36,7 +36,7 @@ var app = new Vue({
       ],
       profile: {
         Name: 'ilham wahyudin',
-        Job: 'Web Designer & Developer',
+        Job: 'Website Designer',
         Levels: 'Bachelors Degree',
         Majors: 'Informatic Engineer'
       },
@@ -68,14 +68,7 @@ var app = new Vue({
           title: 'Build With Angga',
           desc: 'Full-Stack Website Designer',
           target: '#basicExampleModal-4'
-        },
-        {
-          id: 2,
-          img: '../img/sql.svg',
-          title: 'Microsoft Technology Associate',
-          desc: 'Database Administration Fundamentals',
-          target: '#basicExampleModal-5'
-        },
+        }
       ],
       design: [
         {
@@ -247,10 +240,6 @@ var app = new Vue({
         { 
           icon: 'fab fa-vuejs',
           title: 'Vue JS'
-        },
-        { 
-          icon: 'fas fa-database',
-          title: 'MySQL / MariaDB'
         }
       ]
     }
