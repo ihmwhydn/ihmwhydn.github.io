@@ -76,4 +76,6 @@ $(document).ready(function(){
         $('.animated-icon2').toggleClass('open');
       });
 
+      $('#modal6').modal('show')
+
 });

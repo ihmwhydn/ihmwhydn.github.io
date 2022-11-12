@@ -1,16 +1,31 @@
 var app = new Vue({
   el: '#app',
+  methods: {
+    checkError() {
+      if (this.namaKunjungan.length > 14) {
+        this.error = true
+      } else {
+        this.error = false
+      }
+    }
+  },
   data() {
     return {
+      namaKunjungan: '',
+      genderKunjungan: 0,
+      pekerjaanKunjungan: 0,
+      error: false,
       info: {
         cv: '../img/cv.png',
         photo: '../img/profil/01.jpg',
+        photoMale: '../img/profil/man.jpg',
+        photoFemale: '../img/profil/women.jpg',
         heroImage: '../img/tema.png',
         github: 'https://github.com/ihmwhydn',
         behance: 'https://www.behance.net/ilhamw',
         twitter: 'https://twitter.com/ilhamwahyudin_',
         instagram: 'https://www.instagram.com/ilhamwhydinn/',
-        summary: 'Freeelancer Web Designer, Focused for responsive Web Design and transforming Mockup to HTML, CSS, JS Prototype using UI Framework like Bootstrap, Foundation, Bulma, etc.'
+        summary: 'Frontend Developer, Focused for responsive Web Design and transforming Mockup to HTML, CSS, JS Prototype using UI Framework like Bootstrap, Foundation, Bulma, etc.'
       },
       social: [
         { 
@@ -36,7 +51,7 @@ var app = new Vue({
       ],
       profile: {
         Name: 'ilham wahyudin',
-        Job: 'Website Designer',
+        Job: 'Frontend Developer',
         Levels: 'Bachelors Degree',
         Majors: 'Informatic Engineer'
       },
@@ -57,7 +72,7 @@ var app = new Vue({
         },
         { 
           software: 'JS Framework',
-          value: '30',
+          value: '50',
           class: 'vue'
         }
       ],

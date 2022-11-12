@@ -270,7 +270,7 @@ html body {
 }
 
 .vue {
-  width: 30%;
+  width: 50%;
 }
 
 .progress-bar {
@@ -304,6 +304,12 @@ html body {
   font-size: 2.5rem;
 }
 
+.fade {
+  -webkit-transition: opacity .15s linear;
+  transition: opacity .15s linear;
+  background: rgba(0, 0, 0, 0.925);
+}
+
 #modal-2 .modal-dialog .modal-content {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -332,6 +338,10 @@ html body {
 .swiper {
   width: 100%;
   height: auto;
+}
+
+.md-form label {
+  color: #000000;
 }
 
 @media (min-width: 992px) {

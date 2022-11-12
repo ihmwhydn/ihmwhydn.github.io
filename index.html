@@ -30,18 +30,34 @@
               <a class="nav-link pl-2 pl-lg-0" href="#">
                 <div class="d-flex flex-row align-items-center">
                   <div class="mr-2">
+                    <img :src="info.photoMale" class="rounded-circle z-depth-0"
+                    alt="avatar image" height="50" v-if="genderKunjungan == 1">
+                    <img :src="info.photoFemale" class="rounded-circle z-depth-0"
+                    alt="avatar image" height="50" v-else-if="genderKunjungan == 2">
                     <img :src="info.photo" class="rounded-circle z-depth-0"
-                    alt="avatar image" height="50">
+                    alt="avatar image" height="50" v-else>
                   </div>
                   <div>
-                    <p class="h6 mb-0 font-weight-bold">{{profile.Name}}</p>
-                    <p class="mb-0"><small>{{profile.Job}}</small></p>
+                    <div>
+                      <p class="h6 mb-0 text-capitalize font-weight-bold" v-if="namaKunjungan === ''">Anonymous</p>
+                      <p class="h6 mb-0 text-capitalize font-weight-bold" v-else>{{namaKunjungan}}</p>
+                    </div>
+                    <div>
+                      <p class="text-capitalize mb-0" v-if="pekerjaanKunjungan == 1"><small>Software Developer</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 2"><small>Data Engineer</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 3"><small>Data Science</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 4"><small>System Analyst</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 5"><small>Quality Assurance</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 6"><small>UI/UX Designer</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 7"><small>Other Profession</small></p>
+                      <p class="text-capitalize mb-0" v-else><small>No Profession</small></p>
+                    </div>
                   </div>
                 </div>
               </a>            
             </ul>
             <ul class="navbar-nav">
-              <button type="button" class="btn btn-md btn-dark"><code class="text-white text-lowercase">$ cd portfolio/ilham-wahyudin <span class="animated flash infinite slow">|</span></code></button>
+              <button type="button" class="btn btn-md btn-dark"><code class="text-white text-lowercase">$ cd ~/root/ilham-wahyudin <span class="animated flash infinite slow">|</span></code></button>
             </ul>
           </div>
         </div>
@@ -52,12 +68,13 @@
         <div class="row">
           <div class="col-12 col-lg-5 mb-5 mb-lg-0">
             <div class="pesan text-center text-lg-left">
-              <p class="h3 animated fadeInLeft">Hello i'm,</p>
-              <h1 class="display-4 font-weight-bold animated fadeInLeft">{{profile.Name}}</h1>
-              <p class="h5 text-muted animated fadeInLeft">{{profile.Job}}</p>
+              <p class="h3 animated text-uppercase fadeInLeft mb-0">Hello,</p>
+              <h2 class="h2 text-uppercase text-muted font-weight-bold animated fadeInLeft mb-0" v-if="namaKunjungan === ''">Anonymus</h2>
+              <h1 class="h2 text-uppercase text-primary font-weight-bold animated fadeInLeft mb-0" v-else>{{namaKunjungan}}</h1>
+              <p class="h3 animated text-uppercase fadeInLeft mb-0">Welcome To My Page</p>
             </div>
             <div class="sosmed text-center text-lg-left mt-5">
-              <p class="h6 font-weight-bold animated fadeInDown delay-1s">My Social Account, </p>
+              <p class="h6 animated fadeInDown delay-1s">It's my Social Account</p>
               <div class="d-flex justify-content-center justify-content-lg-start flex-wrap">
                 <div class="mr-2 ml-2 ml-lg-0 p-2 p-xl-0 animated fadeInDown delay-1s" v-for="s in social">
                   <a type="button" :class="['btn m-0', s.color]" :href="s.link">
@@ -66,7 +83,7 @@
                 </div>
               </div>
               <div class="resume mt-4">
-                <p class="h6 font-weight-bold animated fadeInUp delay-1s">Email,</p>
+                <p class="h6 animated fadeInUp delay-1s">And it's my Email</p>
                 <a type="button" class="btn btn-primary waves-effect m-0 mr-1 animated fadeInUp delay-1s" data-toggle="modal" data-target="#basicExampleModal">
                   <i class="fas fa-lg fa-envelope"></i> &nbsp; Gmail
                 </a>
@@ -513,6 +530,60 @@
     </div>
     </div>
 
+    <div id="modal6" class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-uppercase font-weight-bold" id="staticBackdropLabel"><i class="fas fa-user"></i> Introduction - Ilham Page</h5>
+          </div>
+          <div class="modal-body px-5 pt-3 pb-5">
+            <div class="row text-center">
+              <div class="col-12 col-lg-4">
+                <div>
+                  <lottie-player src="img/icon/welcom-animate.json" background="transparent" speed="1"
+                  loop autoplay style="width: 250px;"></lottie-player>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 mb-3">
+              <label for="exampleForm2">Your Nickname</label>
+              <input @input="checkError" id="inputkunjungan" type="text" v-model="namaKunjungan" class="form-control" placeholder="Input Nickname" autocomplete="off">
+              <small id="passwordHelpInlineMD" class="text-muted m-0 p-0" v-if="error === false">
+                Max 14 characters long.
+              </small>
+              <small id="passwordHelpInlineMD" class="text-danger m-0 p-0" v-else>
+                Max 14 characters long.
+              </small>
+            </div>
+            <div class="mb-3">
+              <label for="exampleForm2">Your Gender</label>
+              <select v-model="genderKunjungan" class="browser-default custom-select">
+                <option value="0" selected disabled>Select Gender</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label for="exampleForm2">Your Profession</label>
+              <select v-model="pekerjaanKunjungan" class="browser-default custom-select">
+                <option value="0" selected disabled>Select Profession</option>
+                <option value="1">Software Developer</option>
+                <option value="2">Data Engineer</option>
+                <option value="3">Data Science</option>
+                <option value="4">System Analyst</option>
+                <option value="5">Quality Assurance</option>
+                <option value="6">UI/UX Designer</option>
+                <option value="7">Other Profession</option>
+              </select>
+            </div>
+            <div v-if="namaKunjungan !== '' && namaKunjungan.length <= 15 && genderKunjungan !== 0 && pekerjaanKunjungan !== 0 && error === false">
+              <button type="button" class="btn btn-block btn-primary" data-dismiss="modal"><i class="fas fa-sign-in-alt"></i> Visit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -520,6 +591,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.1.0/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lottie-player/1.6.0/lottie-player.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="js/data.js"></script>
