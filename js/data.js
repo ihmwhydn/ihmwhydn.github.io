@@ -1,8 +1,5 @@
 var app = new Vue({
   el: '#app',
-  mounted () {
-    this.getData()
-  },
   methods: {
     checkError () {
       if (this.namaKunjungan.length > 14) {
@@ -11,41 +8,31 @@ var app = new Vue({
         this.error = false
       }
     },
-    async onSubmit () {
-      data = {
-        namaKunjungan: this.namaKunjungan,
-        genderKunjungan: this.genderKunjungan,
-        pekerjaanKunjungan: this.pekerjaanKunjungan
-      }
-      axios
-        .post('../api/guest.json', data)
-        .then(response => {
-          console.log(response)
-        })
-        .catch(error => {
-          console.log(error)
-        })
+    valTgl () {
+      const date = this.tglLahir
+      this.getAge(date)
     },
-    async getData () {
-      axios
-        .get('../api/guest.json')
-        .then(response => {
-          console.log(response)
-        })
-        .catch(error => {
-          console.log(error)
-        })
+    getAge (date) {
+      if (date) {
+        const today = moment(new Date())
+        const dob = moment(new Date(date))
+        var duration = moment.duration(today.diff(dob))
+        var age = duration.years().toString().padStart(2, '0') + ' years Old '
+      }
+      this.umur = age
     }
   },
   data () {
     return {
       namaKunjungan: '',
+      tglLahir: '',
+      umur: '',
       genderKunjungan: 0,
       pekerjaanKunjungan: 0,
       error: false,
       info: {
         cv: '../img/cv.png',
-        photo: '../img/profil/01.jpg',
+        photo: '../img/profil/anonym.jpg',
         photoMale: '../img/profil/man.jpg',
         photoFemale: '../img/profil/women.jpg',
         heroImage: '../img/tema.png',

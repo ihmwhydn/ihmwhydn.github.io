@@ -43,14 +43,14 @@
                       <p class="h6 mb-0 text-capitalize font-weight-bold" v-else>{{namaKunjungan}}</p>
                     </div>
                     <div>
-                      <p class="text-capitalize mb-0" v-if="pekerjaanKunjungan == 1"><small>Software Developer</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 2"><small>Data Engineer</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 3"><small>Data Science</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 4"><small>System Analyst</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 5"><small>Quality Assurance</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 6"><small>UI/UX Designer</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 7"><small>Other Profession</small></p>
-                      <p class="text-capitalize mb-0" v-else><small>No Profession</small></p>
+                      <p class="text-capitalize mb-0" v-if="pekerjaanKunjungan == 1"><small>Software Developer <span v-if="umur !== ''">| {{umur}}</span></small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 2"><small>Data Engineer <span v-if="umur !== ''">| {{umur}}</span></small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 3"><small>Data Science <span v-if="umur !== ''">| {{umur}}</span></small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 4"><small>System Analyst <span v-if="umur !== ''">| {{umur}}</span></small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 5"><small>Quality Assurance <span v-if="umur !== ''">| {{umur}}</span></small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 6"><small>UI/UX Designer <span v-if="umur !== ''">| {{umur}}</span></small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 7"><small>Other Profession <span v-if="umur !== ''">| {{umur}}</span></small></p>
+                      <p class="text-capitalize mb-0" v-else><small>No Profession <span v-if="umur !== ''">| {{umur}}</span></small></p>
                     </div>
                   </div>
                 </div>
@@ -556,6 +556,22 @@
               </small>
             </div>
             <div class="mb-3">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div>
+                    <label for="exampleForm2">Your Birthdate</label>
+                    <input @change="valTgl" id="inputbirth" v-model="tglLahir" type="date" class="form-control" placeholder="Input Nickname" autocomplete="off">
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div>
+                    <label for="exampleForm2">Your Age</label>
+                    <input id="inputbirth" v-model="umur" type="text" class="form-control" placeholder="Age" autocomplete="off" readonly>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
               <label for="exampleForm2">Your Gender</label>
               <select v-model="genderKunjungan" class="browser-default custom-select">
                 <option value="0" selected disabled>Select Gender</option>
@@ -577,7 +593,7 @@
               </select>
             </div>
             <div v-if="namaKunjungan !== '' && namaKunjungan.length <= 15 && genderKunjungan !== 0 && pekerjaanKunjungan !== 0 && error === false">
-              <button type="button" class="btn btn-block btn-primary" data-dismiss="modal" v-on:click="onSubmit"><i class="fas fa-sign-in-alt"></i> Visit</button>
+              <button type="button" class="btn btn-block btn-primary" data-dismiss="modal"><i class="fas fa-sign-in-alt"></i> Let's Goo</button>
             </div>
           </div>
         </div>
@@ -592,7 +608,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.1.0/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lottie-player/1.6.0/lottie-player.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="js/data.js"></script>
