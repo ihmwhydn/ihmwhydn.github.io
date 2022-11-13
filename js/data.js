@@ -1,6 +1,21 @@
 var app = new Vue({
   el: '#app',
+  mounted () {
+    this.getCovid()
+  },
   methods: {
+    async getCovid () {
+      try {
+        const res = await axios.get('https://api.covid19api.com/summary')
+        if (res.status === 200) {
+          this.covidData = res.data.Countries[78]
+        } else {
+          this.errorRes = 'Waiting'
+        }
+      } catch (err) {
+        this.errorRes = err.response
+      }
+    },
     checkError () {
       if (this.namaKunjungan.length > 14) {
         this.error = true
@@ -17,19 +32,21 @@ var app = new Vue({
         const today = moment(new Date())
         const dob = moment(new Date(date))
         var duration = moment.duration(today.diff(dob))
-        var age = duration.years().toString().padStart(2, '0') + ' years Old '
+        var age = duration.years().toString().padStart(2, '0') + ' Years Old '
       }
       this.umur = age
     }
   },
   data () {
     return {
+      covidData: {},
       namaKunjungan: '',
       tglLahir: '',
       umur: '',
       genderKunjungan: 0,
       pekerjaanKunjungan: 0,
       error: false,
+      errorRes: '',
       info: {
         cv: '../img/cv.png',
         photo: '../img/profil/anonym.jpg',
