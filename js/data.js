@@ -1,15 +1,43 @@
 var app = new Vue({
   el: '#app',
+  mounted () {
+    this.getData()
+  },
   methods: {
-    checkError() {
+    checkError () {
       if (this.namaKunjungan.length > 14) {
         this.error = true
       } else {
         this.error = false
       }
+    },
+    async onSubmit () {
+      data = {
+        namaKunjungan: this.namaKunjungan,
+        genderKunjungan: this.genderKunjungan,
+        pekerjaanKunjungan: this.pekerjaanKunjungan
+      }
+      axios
+        .post('../api/guest.json', data)
+        .then(response => {
+          console.log(response)
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    },
+    async getData () {
+      axios
+        .get('../api/guest.json')
+        .then(response => {
+          console.log(response)
+        })
+        .catch(error => {
+          console.log(error)
+        })
     }
   },
-  data() {
+  data () {
     return {
       namaKunjungan: '',
       genderKunjungan: 0,

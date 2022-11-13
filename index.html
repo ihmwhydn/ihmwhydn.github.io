@@ -577,7 +577,7 @@
               </select>
             </div>
             <div v-if="namaKunjungan !== '' && namaKunjungan.length <= 15 && genderKunjungan !== 0 && pekerjaanKunjungan !== 0 && error === false">
-              <button type="button" class="btn btn-block btn-primary" data-dismiss="modal"><i class="fas fa-sign-in-alt"></i> Visit</button>
+              <button type="button" class="btn btn-block btn-primary" data-dismiss="modal" v-on:click="onSubmit"><i class="fas fa-sign-in-alt"></i> Visit</button>
             </div>
           </div>
         </div>
@@ -592,6 +592,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.1.0/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lottie-player/1.6.0/lottie-player.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="js/data.js"></script>
