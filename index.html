@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/css/flag-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.1.0/swiper-bundle.min.css">
   <link rel="stylesheet" href="scss/custom.css">
   <link rel="stylesheet" href="scss/custom.css.map">
@@ -333,26 +334,58 @@
         </div>
       </div>
     </div>
-
-    <div id="footer" class="pt-5 bg-dark">
-      <div class="container">
-        <div class="row text-center text-lg-left">
-          <div class="col-12 col-lg-4 text-white mb-4">
-            <p class="h6 font-weight-bold mb-2">ABOUT</p>
-            <p class="small text-muted mb-0">
-              This Portfolio Website, design using <span class="text-primary">MDBootstrap</span> for UI, and <span class="text-success">VueJS</span> for reactive data render, also <span class="text-danger">Swiper JS</span>.
-            </p>
+    <div id="footer" class="bg-dark">
+      <div :class="['baner bg-abu py-3', CovidClass]">
+        <div class="container align-items-center">
+          <div class="row align-items-center">
+            <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+              <p class="h5 text-white font-weight-bold text-uppercase text-center text-lg-left mb-1"><span class="text-danger">COVID-19</span> INDONESIA <span class="fi fi-id"></span> CASES</p>
+              <p class="small font-italic text-center text-lg-left text-muted mb-0">API get from <span><a href="https://api.covid19api.com/">covid19api.com</a></span> | {{tglCovid}}</p>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="row">
+                <div class="col-6 col-lg-3 text-center mb-3 mb-lg-0">
+                  <p class="h4 font-weight-bold text-white mb-0">{{covidData.NewConfirmed}}</p>
+                  <p class="small text-white mb-0">New Confirmed</p>
+                </div>
+                <div class="col-6 col-lg-3 text-center mb-3 mb-lg-0">
+                  <p class="h4 font-weight-bold text-white mb-0">{{covidData.TotalConfirmed}}</p>
+                  <p class="small text-white mb-0">Total Confirmed</p>
+                </div>
+                <div class="col-6 col-lg-3 text-center mb-3 mb-lg-0">
+                  <p class="h4 font-weight-bold text-white mb-0">{{covidData.NewDeaths}}</p>
+                  <p class="small text-white mb-0">New Deaths</p>
+                </div>
+                <div class="col-6 col-lg-3 text-center mb-3 mb-lg-0">
+                  <p class="h4 font-weight-bold text-white mb-0">{{covidData.TotalDeaths}}</p>
+                  <p class="small text-white mb-0">Total Deaths</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-12 col-lg-2 text-white mr-lg-auto mb-4">
-            <p class="h6 font-weight-bold mb-2">FRAMEWORK & PLUGIN</p>
-            <p class="mb-0"><a href="https://mdbootstrap.com/" class="text-muted"><small>MDBootstrap</small></a></p>
-            <p class="mb-0"><a href="https://vuejs.org/" class="text-muted"><small>VueJS</small></a></p>
-            <p class="mb-0"><a href="https://swiperjs.com/get-started" class="text-muted"><small>Swiper JS</small></a></p>
-          </div>
-          <div class="col-12 col-lg-2 text-white text-lg-right mb-4">
-            <p class="h6 font-weight-bold mb-2">STATUS</p>
-            <p class="small text-muted mb-2">Running &nbsp; <i class="fas fa-circle text-success animated flash infinite slow"></i></p>
-            <p class="small text-muted mb-0">V1.0</p>
+        </div>
+      </div>
+      <div class="py-4">
+        <div class="container">
+          <div class="row text-center text-lg-left">
+            <div class="col-12 col-lg-4 text-white mb-4 mb-lg-0">
+              <p class="h6 font-weight-bold mb-2">ABOUT</p>
+              <p class="small text-muted mb-0">
+                This Website, it's only for Portfolio and Design sample.
+              </p>
+            </div>
+            <div class="col-12 col-lg-2 text-white mr-lg-auto mb-4 mb-lg-0">
+              <p class="h6 font-weight-bold mb-2">FRAMEWORK & PLUGIN</p>
+              <p class="mb-0"><a href="https://mdbootstrap.com/" class="text-muted"><small>MDBootstrap</small></a></p>
+              <p class="mb-0"><a href="https://vuejs.org/" class="text-muted"><small>VueJS</small></a></p>
+              <p class="mb-0"><a href="https://github.com/axios/axios" class="text-muted"><small>Axios API</small></a></p>
+              <p class="mb-0"><a href="https://swiperjs.com/get-started" class="text-muted"><small>Swiper JS</small></a></p>
+            </div>
+            <div class="col-12 col-lg-2 text-white text-lg-right mb-4 mb-lg-0">
+              <p class="h6 font-weight-bold mb-2">STATUS</p>
+              <p class="small text-muted mb-2">Running &nbsp; <i class="fas fa-circle text-success animated flash infinite slow"></i></p>
+              <p class="small text-muted mb-0">V1.0</p>
+            </div>
           </div>
         </div>
       </div>
@@ -374,12 +407,12 @@
     </div>
 
     <div id="modal">
-      <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Email</h5>
+            <h5 class="modal-title font-weight-bold" id="exampleModalLabel1">Email</h5>
           </div>
           <div class="modal-body p-4">
             <img :src="email.gambar" class="img-fluid d-block mx-auto mb-4" alt="..." width="150rem"/>
@@ -394,7 +427,7 @@
     </div>
 
     <div id="modal-2">
-      <div class="modal fade" id="basicExampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      <div class="modal fade" id="basicExampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -410,7 +443,7 @@
     </div>
 
     <div id="modal-3">
-      <div class="modal fade" id="basicExampleModal-3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      <div class="modal fade" id="basicExampleModal-3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -425,12 +458,12 @@
 
     <div id="modal-4">
     <!-- Modal -->
-    <div class="modal fade" id="basicExampleModal-4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="basicExampleModal-4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4"
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Certification</h5>
+            <h5 class="modal-title font-weight-bold" id="exampleModalLabel4">Certification</h5>
           </div>
           <div class="modal-body">
             <img src="./img/sertif-ux 1.png" class="img-fluid d-block mx-auto border border-light shadow" alt="Responsive image">
@@ -475,12 +508,12 @@
 
     <div id="modal-5">
     <!-- Modal -->
-    <div class="modal fade" id="basicExampleModal-5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="basicExampleModal-5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel5"
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Certification</h5>
+            <h5 class="modal-title font-weight-bold" id="exampleModalLabel5">Certification</h5>
           </div>
           <div class="modal-body">
             <img src="./img/sertif-db 1.png" class="img-fluid d-block mx-auto border border-light shadow" alt="Responsive image">

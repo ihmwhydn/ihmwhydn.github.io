@@ -7,10 +7,12 @@ var app = new Vue({
     async getCovid () {
       try {
         const res = await axios.get('https://api.covid19api.com/summary')
-        if (res.status === 200) {
+        if (res.status === 200 && res.data.Countries) {
           this.covidData = res.data.Countries[78]
+          this.convertTgl(this.covidData.Date)
         } else {
           this.errorRes = 'Waiting'
+          this.CovidClass = 'd-none'
         }
       } catch (err) {
         this.errorRes = err.response
@@ -35,11 +37,33 @@ var app = new Vue({
         var age = duration.years().toString().padStart(2, '0') + ' Years Old '
       }
       this.umur = age
+    },
+    convertTgl (tgl) {
+      var months = new Array(12)
+      months[0] = "January"
+      months[1] = "February"
+      months[2] = "March"
+      months[3] = "April"
+      months[4] = "May"
+      months[5] = "June"
+      months[6] = "July"
+      months[7] = "August"
+      months[8] = "September"
+      months[9] = "October"
+      months[10] = "November"
+      months[11] = "December"
+      date = new Date(tgl)
+      year = date.getFullYear()
+      month = date.getMonth()
+      day = date.getDate()
+      this.tglCovid = day + '-' + months[month] + '-' + year
     }
   },
   data () {
     return {
       covidData: {},
+      CovidClass: 'd-block',
+      tglCovid: '',
       namaKunjungan: '',
       tglLahir: '',
       umur: '',
