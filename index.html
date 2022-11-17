@@ -579,15 +579,29 @@
                 </div>
               </div>
             </div>
-            <div class="mt-4 mb-3">
-              <label for="exampleForm2">Your Nickname</label>
-              <input @input="checkError" id="inputkunjungan" type="text" v-model="namaKunjungan" class="form-control" placeholder="Input Nickname" autocomplete="off">
-              <small id="passwordHelpInlineMD" class="text-muted m-0 p-0" v-if="error === false">
-                Max 14 characters long.
-              </small>
-              <small id="passwordHelpInlineMD" class="text-danger m-0 p-0" v-else>
-                Max 14 characters long.
-              </small>
+            <div class="row mt-4">
+              <div class="col-12 col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleForm2">Your Nickname</label>
+                  <input @input="checkError" id="inputkunjungan" type="text" v-model="namaKunjungan" class="form-control" placeholder="Input Nickname" autocomplete="off">
+                  <small id="passwordHelpInlineMD" class="text-muted m-0 p-0" v-if="error === false">
+                    Max 14 characters long.
+                  </small>
+                  <small id="passwordHelpInlineMD" class="text-danger m-0 p-0" v-else>
+                    Max 14 characters long.
+                  </small>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleForm2">Your Gender</label>
+                  <select v-model="genderKunjungan" class="browser-default custom-select">
+                    <option value="0" selected disabled>Select Gender</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                  </select>
+                </div>
+              </div>
             </div>
             <div class="mb-3">
               <div class="row">
@@ -604,14 +618,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleForm2">Your Gender</label>
-              <select v-model="genderKunjungan" class="browser-default custom-select">
-                <option value="0" selected disabled>Select Gender</option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
-              </select>
             </div>
             <div class="mb-4">
               <label for="exampleForm2">Your Profession</label>
