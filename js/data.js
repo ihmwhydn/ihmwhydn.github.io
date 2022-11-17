@@ -5,18 +5,20 @@ var app = new Vue({
   },
   methods: {
     async getCovid () {
-      try {
-        const res = await axios.get('https://api.covid19api.com/summary')
-        if (res.status === 200 && res.data.Countries) {
-          this.covidData = res.data.Countries[78]
+      await axios.get('https://api.covid19api.com/summary').then(response => {
+        console.log(response)
+        if (response.status === 200 && response.data.Countries) {
+          this.covidData = response.data.Countries[78]
           this.convertTgl(this.covidData.Date)
         } else {
           this.errorRes = 'Waiting'
           this.CovidClass = 'd-none'
         }
-      } catch (err) {
-        this.errorRes = err.response
-      }
+      }).catch(error => {
+        console.log(error)
+        this.errorRes = error.response
+        this.CovidClass = 'd-none'
+      })
     },
     checkError () {
       if (this.namaKunjungan.length > 14) {
