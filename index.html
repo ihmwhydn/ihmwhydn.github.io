@@ -44,14 +44,14 @@
                       <p class="h6 mb-0 text-capitalize font-weight-bold" v-else>{{namaKunjungan}}</p>
                     </div>
                     <div>
-                      <p class="text-capitalize mb-0" v-if="pekerjaanKunjungan == 1"><small>Software Developer <span v-if="umur !== ''">| {{umur}}</span></small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 2"><small>Data Engineer <span v-if="umur !== ''">| {{umur}}</span></small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 3"><small>Data Science <span v-if="umur !== ''">| {{umur}}</span></small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 4"><small>System Analyst <span v-if="umur !== ''">| {{umur}}</span></small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 5"><small>Quality Assurance <span v-if="umur !== ''">| {{umur}}</span></small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 6"><small>UI/UX Designer <span v-if="umur !== ''">| {{umur}}</span></small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 7"><small>Other Profession <span v-if="umur !== ''">| {{umur}}</span></small></p>
-                      <p class="text-capitalize mb-0" v-else><small>No Profession <span v-if="umur !== ''">| {{umur}}</span></small></p>
+                      <p class="text-capitalize mb-0" v-if="pekerjaanKunjungan == 1"><small>Software Developer</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 2"><small>Data Engineer</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 3"><small>Data Science</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 4"><small>System Analyst</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 5"><small>Quality Assurance</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 6"><small>UI/UX Designer</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 7"><small>Other Profession</small></p>
+                      <p class="text-capitalize mb-0" v-else><small>No Profession</small></p>
                     </div>
                   </div>
                 </div>
@@ -339,7 +339,7 @@
         <div class="container align-items-center">
           <div class="row align-items-center">
             <div class="col-12 col-lg-6 mb-3 mb-lg-0">
-              <p class="h5 text-white font-weight-bold text-uppercase text-center text-lg-left mb-1"><span class="text-danger">COVID-19</span> INDONESIA <span class="fi fi-id"></span> CASES</p>
+              <p class="h5 text-white font-weight-bold text-uppercase text-center text-lg-left mb-1"><span class="text-danger">COVID-19</span> <span>{{covidData.Country}}</span> CASES</p>
               <p class="small font-italic text-center text-lg-left text-muted mb-0">API get from <span><a href="https://api.covid19api.com/">covid19api.com</a></span> | {{tglCovid}}</p>
             </div>
             <div class="col-12 col-lg-6">

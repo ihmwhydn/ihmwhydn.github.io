@@ -2,11 +2,11 @@ var app = new Vue({
   el: '#app',
   mounted () {
     this.getCovid()
+    this.getBigDay()
   },
   methods: {
     async getCovid () {
       await axios.get('https://api.covid19api.com/summary').then(response => {
-        console.log(response)
         if (response.status === 200 && response.data.Countries) {
           this.covidData = response.data.Countries[78]
           this.convertTgl(this.covidData.Date)
@@ -15,9 +15,15 @@ var app = new Vue({
           this.CovidClass = 'd-none'
         }
       }).catch(error => {
-        console.log(error)
         this.errorRes = error.response
         this.CovidClass = 'd-none'
+      })
+    },
+    async getBigDay () {
+      await axios.get('https://api-harilibur.vercel.app/api').then(response => {
+        this.bigDay = response.data
+      }).catch(error => {
+        this.errorRes = error.response
       })
     },
     checkError () {
@@ -64,6 +70,7 @@ var app = new Vue({
   data () {
     return {
       covidData: {},
+      bigDay: [],
       CovidClass: 'd-block',
       tglCovid: '',
       namaKunjungan: '',
