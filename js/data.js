@@ -3,6 +3,7 @@ var app = new Vue({
   mounted () {
     this.getCovid()
     this.getBigDay()
+    this.getBirthDay()
   },
   methods: {
     async getCovid () {
@@ -36,6 +37,7 @@ var app = new Vue({
     valTgl () {
       const date = this.tglLahir
       this.getAge(date)
+      this.getBirthDay(date)
     },
     getAge (date) {
       if (date) {
@@ -65,6 +67,19 @@ var app = new Vue({
       month = date.getMonth()
       day = date.getDate()
       this.tglCovid = day + '-' + months[month] + '-' + year
+    },
+    getBirthDay (tgl) {
+      const tglKu = new Date(tgl)
+      const birthMonth = tglKu.getMonth()
+      const birthDay = tglKu.getDate()
+      const nowBirth = (birthMonth+1) + '-' + birthDay
+      const now = new Date()
+      const month = now.getMonth()
+      const day = now.getDate()
+      const nowDate = (month+1) + '-' + day
+      if (nowDate === nowBirth) {
+        alert('SELAMAT ULANG TAHUN') 
+      }
     }
   },
   data () {
