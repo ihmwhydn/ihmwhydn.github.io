@@ -100,10 +100,18 @@
       </div>
     </div>
 
+    <div class="birthday" v-if="birthdayNotif === true">
+      <div class="container-fluid bg-primary py-3">
+        <div>
+          <p class="h6 text-center text-white font-weight-bold text-uppercase animated flash infinite slow mb-0"><i class="fas fa-birthday-cake"></i> selamat ulang tahun {{namaKunjungan}}</p>
+        </div>
+      </div>
+    </div>
+
     <div id="profil" class="bg-porto mb-5 pt-5 pb-5">
       <div class="container">
         <div class="text-center mb-4 mb-lg-5">
-          <h3><strong>Personal</strong> <span class="badge badge-primary animated flash infinite slow">PROFILE</span></h3>
+          <h3><strong>Personal</strong> <span class="badge badge-primary">PROFILE</span></h3>
         </div>
         <div class="row">
           <div class="col-12 col-xl-4 mb-4 mb-xl-0">
@@ -217,7 +225,7 @@
     <div class="work-method bg-porto py-5">
       <div class="container">
         <div class="text-center mb-5">
-          <h3><strong>Design</strong> <span class="badge badge-primary animated flash infinite slow">METHOD</span></h3>
+          <h3><strong>Design</strong> <span class="badge badge-primary">METHOD</span></h3>
         </div>
         <div class="row justify-content-between mb-lg-5 py-lg-4">
           <div class="col-12 col-lg-5 d-flex align-items-center mb-4 mb-lg-0">
@@ -320,7 +328,7 @@
     <div class="work-tool bg-white my-5">
       <div class="container-fluid px-lg-0 padding-custom">
         <div class="text-center mb-4">
-          <h3><strong>Work Using</strong> <span class="badge badge-primary animated flash infinite slow">THIS</span></h3>
+          <h3><strong>Work Using</strong> <span class="badge badge-primary">THIS</span></h3>
         </div>
         <div class="swiper mySwiper-2">
           <div class="swiper-wrapper">
@@ -603,15 +611,15 @@
                 </div>
               </div>
             </div>
-            <div class="mb-3">
+            <div>
               <div class="row">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 mb-3">
                   <div>
                     <label for="exampleForm2">Your Birthdate</label>
                     <input @change="valTgl" id="inputbirth" v-model="tglLahir" type="date" class="form-control">
                   </div>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 mb-3">
                   <div>
                     <label for="exampleForm2">Your Age</label>
                     <input id="inputbirth" v-model="umur" type="text" class="form-control" placeholder="Age" readonly>
@@ -649,6 +657,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.1.0/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lottie-player/1.6.0/lottie-player.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.webticker/3.0.0/jquery.webticker.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script type="text/javascript" src="js/script.js"></script>

@@ -1,75 +1,83 @@
 var app = new Vue({
   el: '#app',
   mounted () {
-    this.getCovid()
-    this.getBigDay()
-    this.getBirthDay()
+    var me = this
+    me.getCovid()
+    me.getBigDay()
   },
   methods: {
     async getCovid () {
+      var me = this
       await axios.get('https://api.covid19api.com/summary').then(response => {
         if (response.status === 200 && response.data.Countries) {
-          this.covidData = response.data.Countries[78]
-          this.convertTgl(this.covidData.Date)
+          me.covidData = response.data.Countries[78]
+          me.convertTgl(me.covidData.Date)
         } else {
-          this.errorRes = 'Waiting'
-          this.CovidClass = 'd-none'
+          me.errorRes = 'Waiting'
+          me.CovidClass = 'd-none'
         }
       }).catch(error => {
-        this.errorRes = error.response
-        this.CovidClass = 'd-none'
+        me.errorRes = error.response
+        me.CovidClass = 'd-none'
       })
     },
     async getBigDay () {
+      var me = this
       await axios.get('https://api-harilibur.vercel.app/api').then(response => {
-        this.bigDay = response.data
+        me.bigDay = response.data
       }).catch(error => {
-        this.errorRes = error.response
+        me.errorRes = error.response
       })
     },
     checkError () {
-      if (this.namaKunjungan.length > 14) {
-        this.error = true
+      var me = this
+      if (me.namaKunjungan.length > 14) {
+        me.error = true
       } else {
-        this.error = false
+        me.error = false
       }
     },
     valTgl () {
-      const date = this.tglLahir
-      this.getAge(date)
-      this.getBirthDay(date)
+      var me = this
+      const date = me.tglLahir
+      me.getAge(date)
+      me.getBirthDay(date)
     },
     getAge (date) {
+      var me = this
       if (date) {
         const today = moment(new Date())
         const dob = moment(new Date(date))
         var duration = moment.duration(today.diff(dob))
         var age = duration.years().toString().padStart(2, '0') + ' Years Old '
       }
-      this.umur = age
+      me.umur = age
+
     },
     convertTgl (tgl) {
+      var me = this
       var months = new Array(12)
-      months[0] = "January"
-      months[1] = "February"
-      months[2] = "March"
-      months[3] = "April"
-      months[4] = "May"
-      months[5] = "June"
-      months[6] = "July"
-      months[7] = "August"
-      months[8] = "September"
-      months[9] = "October"
-      months[10] = "November"
-      months[11] = "December"
-      date = new Date(tgl)
-      year = date.getFullYear()
-      month = date.getMonth()
-      day = date.getDate()
-      this.tglCovid = day + '-' + months[month] + '-' + year
+      months[0] = 'January'
+      months[1] = 'February'
+      months[2] = 'March'
+      months[3] = 'April'
+      months[4] = 'May'
+      months[5] = 'June'
+      months[6] = 'July'
+      months[7] = 'August'
+      months[8] = 'September'
+      months[9] = 'October'
+      months[10] = 'November'
+      months[11] = 'December'
+      var date = new Date(tgl)
+      var year = date.getFullYear()
+      var month = date.getMonth()
+      var day = date.getDate()
+      me.tglCovid = day + '-' + months[month] + '-' + year
     },
-    getBirthDay (tgl) {
-      const tglKu = new Date(tgl)
+    getBirthDay (date) {
+      var me = this
+      const tglKu = new Date(date)
       const birthMonth = tglKu.getMonth()
       const birthDay = tglKu.getDate()
       const nowBirth = (birthMonth+1) + '-' + birthDay
@@ -78,7 +86,7 @@ var app = new Vue({
       const day = now.getDate()
       const nowDate = (month+1) + '-' + day
       if (nowDate === nowBirth) {
-        alert('SELAMAT ULANG TAHUN') 
+        me.birthdayNotif = true
       }
     }
   },
@@ -86,6 +94,7 @@ var app = new Vue({
     return {
       covidData: {},
       bigDay: [],
+      birthdayNotif: false,
       CovidClass: 'd-block',
       tglCovid: '',
       namaKunjungan: '',
