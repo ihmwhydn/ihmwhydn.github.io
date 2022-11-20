@@ -31,7 +31,7 @@ var app = new Vue({
     },
     checkError () {
       var me = this
-      if (me.namaKunjungan.length > 14) {
+      if (me.namaKunjungan.length > 15) {
         me.error = true
       } else {
         me.error = false
@@ -41,7 +41,6 @@ var app = new Vue({
       var me = this
       const date = me.tglLahir
       me.getAge(date)
-      me.getBirthDay(date)
     },
     getAge (date) {
       var me = this
@@ -52,7 +51,6 @@ var app = new Vue({
         var age = duration.years().toString().padStart(2, '0') + ' Years Old '
       }
       me.umur = age
-
     },
     convertTgl (tgl) {
       var me = this
@@ -75,9 +73,10 @@ var app = new Vue({
       var day = date.getDate()
       me.tglCovid = day + '-' + months[month] + '-' + year
     },
-    getBirthDay (date) {
+    getBirthDay () {
       var me = this
-      const tglKu = new Date(date)
+      var tglLahir = me.tglLahir
+      const tglKu = new Date(tglLahir)
       const birthMonth = tglKu.getMonth()
       const birthDay = tglKu.getDate()
       const nowBirth = (birthMonth+1) + '-' + birthDay
@@ -88,6 +87,13 @@ var app = new Vue({
       if (nowDate === nowBirth) {
         me.birthdayNotif = true
       }
+    },
+    async onSimpan () {
+      var me = this
+      me.viewData.nama = me.namaKunjungan
+      me.viewData.pekerjaan = me.pekerjaanKunjungan
+      me.viewData.gender = me.genderKunjungan
+      me.getBirthDay()
     }
   },
   data () {
@@ -102,6 +108,11 @@ var app = new Vue({
       umur: '',
       genderKunjungan: 0,
       pekerjaanKunjungan: 0,
+      viewData: {
+        nama: '',
+        pekerjaan: '',
+        gender: 0
+      },
       error: false,
       errorRes: '',
       info: {

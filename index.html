@@ -32,25 +32,25 @@
                 <div class="d-flex flex-row align-items-center">
                   <div class="mr-2">
                     <img :src="info.photoMale" class="rounded-circle z-depth-0"
-                    alt="avatar image" height="50" v-if="genderKunjungan == 1">
+                    alt="avatar image" height="50" v-if="viewData.gender == 1">
                     <img :src="info.photoFemale" class="rounded-circle z-depth-0"
-                    alt="avatar image" height="50" v-else-if="genderKunjungan == 2">
+                    alt="avatar image" height="50" v-else-if="viewData.gender == 2">
                     <img :src="info.photo" class="rounded-circle z-depth-0"
                     alt="avatar image" height="50" v-else>
                   </div>
                   <div>
                     <div>
-                      <p class="h6 mb-0 text-capitalize font-weight-bold" v-if="namaKunjungan === ''">Anonymous</p>
-                      <p class="h6 mb-0 text-capitalize font-weight-bold" v-else>{{namaKunjungan}}</p>
+                      <p class="h6 mb-0 text-capitalize font-weight-bold" v-if="viewData.nama === ''">Anonymous</p>
+                      <p class="h6 mb-0 text-capitalize font-weight-bold" v-else>{{viewData.nama}}</p>
                     </div>
                     <div>
-                      <p class="text-capitalize mb-0" v-if="pekerjaanKunjungan == 1"><small>Software Developer</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 2"><small>Data Engineer</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 3"><small>Data Science</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 4"><small>System Analyst</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 5"><small>Quality Assurance</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 6"><small>UI/UX Designer</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="pekerjaanKunjungan == 7"><small>Other Profession</small></p>
+                      <p class="text-capitalize mb-0" v-if="viewData.pekerjaan == 1"><small>Software Developer</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="viewData.pekerjaan == 2"><small>Data Engineer</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="viewData.pekerjaan == 3"><small>Data Science</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="viewData.pekerjaan == 4"><small>System Analyst</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="viewData.pekerjaan == 5"><small>Quality Assurance</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="viewData.pekerjaan == 6"><small>UI/UX Designer</small></p>
+                      <p class="text-capitalize mb-0" v-else-if="viewData.pekerjaan == 7"><small>Other Profession</small></p>
                       <p class="text-capitalize mb-0" v-else><small>No Profession</small></p>
                     </div>
                   </div>
@@ -70,8 +70,8 @@
           <div class="col-12 col-lg-5 mb-5 mb-lg-0">
             <div class="pesan text-center text-lg-left">
               <p class="h3 animated text-uppercase fadeInLeft mb-0">Hello,</p>
-              <h2 class="h2 text-uppercase text-muted font-weight-bold animated fadeInLeft mb-0" v-if="namaKunjungan === ''">Anonymus</h2>
-              <h1 class="h2 text-uppercase text-primary font-weight-bold animated fadeInLeft mb-0" v-else>{{namaKunjungan}}</h1>
+              <h2 class="h2 text-uppercase text-muted font-weight-bold animated fadeInLeft mb-0" v-if="viewData.nama === ''">Anonymus</h2>
+              <h1 class="h2 text-uppercase text-primary font-weight-bold animated fadeInLeft mb-0" v-else>{{viewData.nama}}</h1>
               <p class="h3 animated text-uppercase fadeInLeft mb-0">Welcome To My Page</p>
             </div>
             <div class="sosmed text-center text-lg-left mt-5">
@@ -189,35 +189,40 @@
         <div class="text-center mb-4">
           <h3><strong>Example Design</strong> <span class="badge badge-primary animated flash infinite slow">PIN</span></h3>
         </div>
-        <div class="swiper mySwiper-1">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide py-1 px-1" v-for="d in design" :key="d.id">
-              <div class="card text-center text-lg-left">
-                <div class="view overlay">
-                  <img class="card-img-top" :src="d.img"
-                    alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div> 
-                  </a>
-                </div>
-                <div class="card-body">
-                  <span :class="['mr-1 mb-3', d.badgeclass]">{{d.label}}</span>
-                  <span :class="['mr-1 mb-3', d.badgeclass]">{{d.labelb}}</span>
-                  <p class="h6 font-weight-bold">{{d.title}}</p>
-                  <p class="small small-custom">{{d.tools}} <i class="far fa-check-circle text-success"></i></p>
-                  <a :href="d.behance" :class="['mr-2', d.beclass]" :data-toggle="d.toggle" :data-target="d.target">
-                    <i :class="['fab', d.beicon]"></i> {{d.brandb}}
-                  </a>
-                  <a :href="d.github" :class="[d.gitclass]" :data-toggle="d.toggleb" :data-target="d.targetb">
-                    <i :class="d.giticon"></i> {{d.brand}}
-                  </a>
-                </div>
-              </div> 
+        <div>
+          <div class="swiper mySwiper-1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide py-1 px-1" v-for="d in design" :key="d.id">
+                <div class="card text-center text-lg-left">
+                  <div class="view overlay">
+                    <img class="card-img-top" :src="d.img"
+                      alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div> 
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <span :class="['mr-1 mb-3', d.badgeclass]">{{d.label}}</span>
+                    <span :class="['mr-1 mb-3', d.badgeclass]">{{d.labelb}}</span>
+                    <p class="h6 font-weight-bold">{{d.title}}</p>
+                    <p class="small small-custom">{{d.tools}} <i class="far fa-check-circle text-success"></i></p>
+                    <a :href="d.behance" :class="['mr-2', d.beclass]" :data-toggle="d.toggle" :data-target="d.target">
+                      <i :class="['fab', d.beicon]"></i> {{d.brandb}}
+                    </a>
+                    <a :href="d.github" :class="[d.gitclass]" :data-toggle="d.toggleb" :data-target="d.targetb">
+                      <i :class="d.giticon"></i> {{d.brand}}
+                    </a>
+                  </div>
+                </div> 
+              </div>
+            </div>
+            <div id="swp-pagination-1" class="pt-3">
+              <div class="swiper-pagination-1 d-flex justify-content-center"></div>
             </div>
           </div>
-          <div id="swp-pagination-1" class="pt-3">
-            <div class="swiper-pagination-1 d-flex justify-content-center"></div>
-          </div>
+        </div>
+        <div>
+          
         </div>
       </div>
     </div>
@@ -592,11 +597,8 @@
                 <div class="mb-3">
                   <label for="exampleForm2">Your Nickname</label>
                   <input @input="checkError" id="inputkunjungan" type="text" v-model="namaKunjungan" class="form-control" placeholder="Input Nickname" autocomplete="off">
-                  <small id="passwordHelpInlineMD" class="text-muted m-0 p-0" v-if="error === false">
-                    Max 14 characters long.
-                  </small>
-                  <small id="passwordHelpInlineMD" class="text-danger m-0 p-0" v-else>
-                    Max 14 characters long.
+                  <small id="passwordHelpInlineMD" class="text-danger m-0 p-0" v-if="error === true">
+                    Max 15 characters long.
                   </small>
                 </div>
               </div>
@@ -641,7 +643,7 @@
               </select>
             </div>
             <div v-if="namaKunjungan !== '' && namaKunjungan.length <= 15 && genderKunjungan !== 0 && pekerjaanKunjungan !== 0 && error === false">
-              <button type="button" class="btn btn-block btn-primary" data-dismiss="modal"><i class="fas fa-sign-in-alt"></i> Let's Goo</button>
+              <button @click="onSimpan" type="button" class="btn btn-block btn-primary" data-dismiss="modal"><i class="fas fa-sign-in-alt"></i> Let's Goo</button>
             </div>
           </div>
         </div>
