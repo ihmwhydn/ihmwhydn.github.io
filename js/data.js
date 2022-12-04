@@ -28,6 +28,12 @@ var app = new Vue({
       }).catch(error => {
         me.errorRes = error.response
       })
+      var array = []
+      var l = me.bigDay.length
+      for (var i = 0; i < l; i++) {
+        var b = me.bigDay[i].holiday_date
+        array.push(b)
+      }
     },
     checkError () {
       var me = this
