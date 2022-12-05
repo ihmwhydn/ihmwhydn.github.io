@@ -28,11 +28,18 @@ var app = new Vue({
       }).catch(error => {
         me.errorRes = error.response
       })
-      var array = []
       var l = me.bigDay.length
+      var capDate = new Date()
+      var y = capDate.getFullYear()
+      var m = capDate.getMonth()
+      var d = capDate.getDate()
+      var joinDate = y + '-' + (m+1) + '-' + d
+      var joinDateConvert = joinDate.toString()
       for (var i = 0; i < l; i++) {
-        var b = me.bigDay[i].holiday_date
-        array.push(b)
+        if (me.bigDay[i].holiday_date === joinDateConvert) {
+          me.bigDayNotif = true
+          return false
+        }
       }
     },
     checkError () {
@@ -107,6 +114,7 @@ var app = new Vue({
       covidData: {},
       bigDay: [],
       birthdayNotif: false,
+      bigDayNotif: false,
       CovidClass: 'd-block',
       tglCovid: '',
       namaKunjungan: '',
