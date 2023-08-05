@@ -41,24 +41,24 @@
                   <div>
                     <div>
                       <p class="h6 mb-0 text-capitalize font-weight-bold" v-if="viewData.nama === ''">Anonymous</p>
-                      <p class="h6 mb-0 text-capitalize font-weight-bold" v-else>{{viewData.nama}}</p>
+                      <p class="h6 mb-0 text-capitalize font-weight-normal" v-else><span class="font-weight-bold">{{viewData.nama}}</span>, {{viewData.umur}}</p>
                     </div>
                     <div>
-                      <p class="text-capitalize mb-0" v-if="viewData.pekerjaan == 1"><small>Software Developer</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="viewData.pekerjaan == 2"><small>Data Engineer</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="viewData.pekerjaan == 3"><small>Data Science</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="viewData.pekerjaan == 4"><small>System Analyst</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="viewData.pekerjaan == 5"><small>Quality Assurance</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="viewData.pekerjaan == 6"><small>UI/UX Designer</small></p>
-                      <p class="text-capitalize mb-0" v-else-if="viewData.pekerjaan == 7"><small>Other Profession</small></p>
-                      <p class="text-capitalize mb-0" v-else><small>No Profession</small></p>
+                      <p class="h5 text-capitalize mb-0" v-if="viewData.pekerjaan == 1"><small>Software Developer</small></p>
+                      <p class="h5 text-capitalize mb-0" v-else-if="viewData.pekerjaan == 2"><small>Data Engineer</small></p>
+                      <p class="h5 text-capitalize mb-0" v-else-if="viewData.pekerjaan == 3"><small>Data Science</small></p>
+                      <p class="h5 text-capitalize mb-0" v-else-if="viewData.pekerjaan == 4"><small>System Analyst</small></p>
+                      <p class="h5 text-capitalize mb-0" v-else-if="viewData.pekerjaan == 5"><small>Quality Assurance</small></p>
+                      <p class="h5 text-capitalize mb-0" v-else-if="viewData.pekerjaan == 6"><small>UI/UX Designer</small></p>
+                      <p class="h5 text-capitalize mb-0" v-else-if="viewData.pekerjaan == 7"><small>Other Profession</small></p>
+                      <p class="h5 text-capitalize mb-0" v-else><small>No Profession</small></p>
                     </div>
                   </div>
                 </div>
               </a>            
             </ul>
             <ul class="navbar-nav">
-              <button type="button" class="btn btn-md btn-dark"><code class="text-white text-lowercase">$ cd ~/root/ilham-wahyudin <span class="animated flash infinite slow">|</span></code></button>
+              <button type="button" class="btn btn-md btn-dark"><code class="text-white text-lowercase">$ cd ~/root/cv/ilham-wahyudin <span class="animated flash infinite slow">|</span></code></button>
             </ul>
           </div>
         </div>
@@ -72,7 +72,7 @@
               <p class="h3 animated text-uppercase fadeInLeft mb-0">Hello,</p>
               <h2 class="h2 text-uppercase text-muted font-weight-bold animated fadeInLeft mb-0" v-if="viewData.nama === ''">Anonymus</h2>
               <h1 class="h2 text-uppercase text-primary font-weight-bold animated fadeInLeft mb-0" v-else>{{viewData.nama}}</h1>
-              <p class="h3 animated text-uppercase fadeInLeft mb-0">Welcome To My Page</p>
+              <p class="h3 animated text-uppercase fadeInLeft mb-0">Welcome To Ilham Wahyudin Page</p>
             </div>
             <div class="sosmed text-center text-lg-left mt-5">
               <p class="h6 animated fadeInDown delay-1s">It's my Social Account</p>
@@ -103,7 +103,7 @@
     <div class="birthday" v-if="birthdayNotif === true">
       <div class="container-fluid bg-primary py-3">
         <div>
-          <p class="h6 text-center text-white font-weight-bold text-uppercase animated flash infinite slow mb-0"><i class="fas fa-birthday-cake"></i> Happy Birthday {{namaKunjungan}}</p>
+          <p class="h6 text-center text-white font-weight-bold text-uppercase animated flash infinite slow mb-0"><i class="fas fa-birthday-cake"></i> Happy Birthday {{viewData.nama}}</p>
         </div>
       </div>
     </div>
@@ -348,36 +348,6 @@
       </div>
     </div>
     <div id="footer" class="bg-dark">
-      <div :class="['baner bg-abu py-3', CovidClass]">
-        <div class="container align-items-center">
-          <div class="row align-items-center">
-            <div class="col-12 col-lg-6 mb-3 mb-lg-0">
-              <p class="h5 text-white font-weight-bold text-uppercase text-center text-lg-left mb-1"><span class="text-danger">COVID-19</span> <span>{{covidData.Country}}</span> CASES</p>
-              <p class="small font-italic text-center text-lg-left text-muted mb-0">API get from <span><a href="https://api.covid19api.com/">covid19api.com</a></span> | {{tglCovid}}</p>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="row">
-                <div class="col-6 col-lg-3 text-center mb-3 mb-lg-0">
-                  <p class="h4 font-weight-bold text-white mb-0">{{covidData.NewConfirmed}}</p>
-                  <p class="small text-white mb-0">New Confirmed</p>
-                </div>
-                <div class="col-6 col-lg-3 text-center mb-3 mb-lg-0">
-                  <p class="h4 font-weight-bold text-white mb-0">{{covidData.TotalConfirmed}}</p>
-                  <p class="small text-white mb-0">Total Confirmed</p>
-                </div>
-                <div class="col-6 col-lg-3 text-center mb-3 mb-lg-0">
-                  <p class="h4 font-weight-bold text-white mb-0">{{covidData.NewDeaths}}</p>
-                  <p class="small text-white mb-0">New Deaths</p>
-                </div>
-                <div class="col-6 col-lg-3 text-center mb-3 mb-lg-0">
-                  <p class="h4 font-weight-bold text-white mb-0">{{covidData.TotalDeaths}}</p>
-                  <p class="small text-white mb-0">Total Deaths</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="py-4">
         <div class="container">
           <div class="row text-center text-lg-left">
@@ -624,7 +594,7 @@
                 <div class="col-12 col-lg-6 mb-3">
                   <div>
                     <label for="exampleForm2">Your Age</label>
-                    <input id="inputbirth" v-model="umur" type="text" class="form-control" placeholder="Age" readonly>
+                    <input id="inputbirth" v-model="viewData.umur" type="text" class="form-control" placeholder="Age" readonly>
                   </div>
                 </div>
               </div>

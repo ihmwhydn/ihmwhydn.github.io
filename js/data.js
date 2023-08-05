@@ -2,21 +2,18 @@ var app = new Vue({
   el: '#app',
   data () {
     return {
-      covidData: {},
       bigDay: [],
       birthdayNotif: false,
       bigDayNotif: false,
-      CovidClass: 'd-block',
-      tglCovid: '',
       namaKunjungan: '',
-      tglLahir: '',
-      umur: '',
       genderKunjungan: 0,
+      tglLahir: '',
       pekerjaanKunjungan: 0,
       viewData: {
         nama: '',
         pekerjaan: '',
-        gender: 0
+        gender: 0,
+        umur: ''
       },
       error: false,
       errorRes: '',
@@ -204,41 +201,41 @@ var app = new Vue({
           beicon: 'fa-behance',
           brandb: 'Behance',
           badgeclass: 'badge badge-success'
-         },
-         { 
-          id: 8,
-          img: '../img/design/drink.png',
-          label: 'Mobile App Design',
-          title: 'Food & Drink Orders',
-          tools: 'UI Design',
-          gitclass: 'btn btn-sm github-color m-0',
-          giticon: 'fas fa-eye',
-          brand: 'Live Demo',
-          behance: 'https://www.behance.net/gallery/91233561/Concept-For-Food-Drink-Orders-Mobile-App',
-          beclass: 'btn btn-sm behance-color m-0',
-          beicon: 'fa-behance',
-          brandb: 'Behance',
-          toggleb: 'modal',
-          targetb: '#basicExampleModal-3',          
-          badgeclass: 'badge badge-success'
-         },
-        { 
-          id: 9,
-          img: '../img/design/jadwal.png',
-          label: 'Mobile App Design',
-          title: 'Scheduler Alerts',
-          tools: 'UI Design',
-          gitclass: 'btn btn-sm github-color m-0',
-          giticon: 'fas fa-eye',
-          brand: 'Live Demo',
-          behance: 'https://www.behance.net/gallery/91061661/Re-Design-Scheduler-Alert-Mobile-App',
-          beclass: 'btn btn-sm behance-color m-0',
-          beicon: 'fa-behance',
-          brandb: 'Behance',
-          toggleb: 'modal',
-          targetb: '#basicExampleModal-3',          
-          badgeclass: 'badge badge-success'
          }
+        //  { 
+        //   id: 8,
+        //   img: '../img/design/drink.png',
+        //   label: 'Mobile App Design',
+        //   title: 'Food & Drink Orders',
+        //   tools: 'UI Design',
+        //   gitclass: 'btn btn-sm github-color m-0',
+        //   giticon: 'fas fa-eye',
+        //   brand: 'Live Demo',
+        //   behance: 'https://www.behance.net/gallery/91233561/Concept-For-Food-Drink-Orders-Mobile-App',
+        //   beclass: 'btn btn-sm behance-color m-0',
+        //   beicon: 'fa-behance',
+        //   brandb: 'Behance',
+        //   toggleb: 'modal',
+        //   targetb: '#basicExampleModal-3',          
+        //   badgeclass: 'badge badge-success'
+        //  },
+        // { 
+        //   id: 9,
+        //   img: '../img/design/jadwal.png',
+        //   label: 'Mobile App Design',
+        //   title: 'Scheduler Alerts',
+        //   tools: 'UI Design',
+        //   gitclass: 'btn btn-sm github-color m-0',
+        //   giticon: 'fas fa-eye',
+        //   brand: 'Live Demo',
+        //   behance: 'https://www.behance.net/gallery/91061661/Re-Design-Scheduler-Alert-Mobile-App',
+        //   beclass: 'btn btn-sm behance-color m-0',
+        //   beicon: 'fa-behance',
+        //   brandb: 'Behance',
+        //   toggleb: 'modal',
+        //   targetb: '#basicExampleModal-3',          
+        //   badgeclass: 'badge badge-success'
+        //  }
       ],
       tools: [
         { 
@@ -265,42 +262,20 @@ var app = new Vue({
     }
   },
   mounted () {
-    this.getCovid()
+    this.openModal()
     this.getBigDay()
   },
   methods: {
-    async getCovid () {
-      await axios.get('https://api.covid19api.com/summary').then(response => {
-        if (response.status === 200 && response.data.Countries) {
-          this.covidData = response.data.Countries[78]
-          this.convertTgl(this.covidData.Date)
-        } else {
-          this.errorRes = 'Waiting'
-          this.CovidClass = 'd-none'
-        }
-      }).catch(error => {
-        this.errorRes = error.response
-        this.CovidClass = 'd-none'
-      })
-    },
-    async getBigDay () {
-      await axios.get('https://api-harilibur.vercel.app/api').then(response => {
-        this.bigDay = response.data
-      }).catch(error => {
-        this.errorRes = error.response
-      })
-      var l = this.bigDay.length
-      var capDate = new Date()
-      var y = capDate.getFullYear()
-      var m = capDate.getMonth()
-      var d = capDate.getDate()
-      var joinDate = y + '-' + (m+1) + '-' + d
-      var joinDateConvert = joinDate.toString()
-      for (var i = 0; i < l; i++) {
-        if (this.bigDay[i].holiday_date === joinDateConvert) {
-          this.bigDayNotif = true
-          return false
-        }
+    openModal () {
+      if (localStorage.recordPengunjung) {
+        const jsonData = JSON.parse(localStorage.recordPengunjung)
+        this.viewData.nama = jsonData.value1
+        this.viewData.pekerjaan = jsonData.value2
+        this.viewData.gender = jsonData.value3
+        this.getBirthDay(jsonData.value4)
+        this.getAge(jsonData.value4)
+      } else {
+        $('#modal6').modal('show')
       }
     },
     checkError () {
@@ -321,40 +296,52 @@ var app = new Vue({
         var duration = moment.duration(today.diff(dob))
         var age = duration.years().toString().padStart(2, '0') + ' Years Old '
       }
-      this.umur = age
+      this.viewData.umur = age
     },
-    convertTgl (tgl) {
-      var months = new Array(12)
-      months[0] = 'January'
-      months[1] = 'February'
-      months[2] = 'March'
-      months[3] = 'April'
-      months[4] = 'May'
-      months[5] = 'June'
-      months[6] = 'July'
-      months[7] = 'August'
-      months[8] = 'September'
-      months[9] = 'October'
-      months[10] = 'November'
-      months[11] = 'December'
-      var date = new Date(tgl)
-      var year = date.getFullYear()
-      var month = date.getMonth()
-      var day = date.getDate()
-      this.tglCovid = day + '-' + months[month] + '-' + year
-    },
-    getBirthDay () {
-      var tglLahir = this.tglLahir
-      const tglKu = new Date(tglLahir)
-      const birthMonth = tglKu.getMonth()
-      const birthDay = tglKu.getDate()
-      const nowBirth = (birthMonth+1) + '-' + birthDay
-      const now = new Date()
-      const month = now.getMonth()
-      const day = now.getDate()
-      const nowDate = (month+1) + '-' + day
+    getBirthDay (value) {
+      var tglKu = new Date(this.tglLahir || value)
+      var birthMonth = tglKu.getMonth() + 1
+      var birthDay = tglKu.getDate()
+      var now = new Date()
+      var month = now.getMonth() + 1
+      var day = now.getDate()
+      if (birthMonth < 10 || month < 10) {
+        birthMonth = '0' + birthMonth
+        month = '0' + month
+      }
+      if (birthDay < 10 || day < 10) {
+        birthDay = '0' + birthDay
+        day = '0' + day
+      }
+      var nowBirth = birthMonth + '-' + birthDay
+      var nowDate = month + '-' + day
       if (nowDate === nowBirth) {
         this.birthdayNotif = true
+      }
+    },
+    async getBigDay () {
+      await axios.get('https://api-harilibur.vercel.app/api').then(response => {
+        this.bigDay = response.data
+      }).catch(error => {
+        this.errorRes = error.response
+      })
+      var l = this.bigDay.length
+      var capDate = new Date()
+      var y = capDate.getFullYear()
+      var m = capDate.getMonth() + 1
+      var d = capDate.getDate()
+      if (m < 10) {
+        m = '0' + m
+      }
+      if (d < 10) {
+        d = '0' + d
+      }
+      var joinDate = y + '-' + m + '-' + d
+      var joinDateConvert = joinDate.toString()
+      for (var i = 0; i < l; i++) {
+        if (this.bigDay[i].holiday_date === joinDateConvert) {
+          this.bigDayNotif = true
+        }
       }
     },
     async onSimpan () {
@@ -362,6 +349,14 @@ var app = new Vue({
       this.viewData.pekerjaan = this.pekerjaanKunjungan
       this.viewData.gender = this.genderKunjungan
       this.getBirthDay()
+      const dataToSave = {
+        value1: this.namaKunjungan,
+        value2: this.pekerjaanKunjungan,
+        value3: this.genderKunjungan,
+        value4: this.tglLahir
+      }
+      const jsontData = JSON.stringify(dataToSave)
+      localStorage.setItem('recordPengunjung', jsontData)
     }
   }
 })
