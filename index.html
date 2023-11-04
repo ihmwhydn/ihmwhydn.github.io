@@ -41,7 +41,7 @@
                   <div>
                     <div>
                       <p class="h6 mb-0 text-capitalize font-weight-bold" v-if="viewData.nama === ''">Anonymous</p>
-                      <p class="h6 mb-0 text-capitalize font-weight-normal" v-else><span class="font-weight-bold">{{viewData.nama}}</span>, {{viewData.umur}}</p>
+                      <p class="h6 mb-0 text-capitalize font-weight-normal" v-else><span class="font-weight-bold">{{viewData.nama}}</span>, {{viewData.umur}} <span class="badge badge-primary py-1 px-2" @click="clearLocal">Ganti Profile</span></p>
                     </div>
                     <div>
                       <p class="h5 text-capitalize mb-0" v-if="viewData.pekerjaan == 1"><small>Software Developer</small></p>

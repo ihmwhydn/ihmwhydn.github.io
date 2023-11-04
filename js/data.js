@@ -44,12 +44,12 @@ var app = new Vue({
           link: 'https://www.behance.net/ilhamw',
           icon: 'fa-behance',
           color: 'behance-color'
-        },
-        { 
-          link: 'https://www.instagram.com/ilhamwhydinn/',
-          icon: 'fa-instagram',
-          color: 'instagram-color'
         }
+        // { 
+        //   link: 'https://www.instagram.com/ilhamwhydinn/',
+        //   icon: 'fa-instagram',
+        //   color: 'instagram-color'
+        // }
       ],
       profile: {
         Name: 'ilham wahyudin',
@@ -277,6 +277,10 @@ var app = new Vue({
       } else {
         $('#modal6').modal('show')
       }
+    },
+    clearLocal () {
+      localStorage.removeItem('recordPengunjung')
+      location.reload()
     },
     checkError () {
       if (this.namaKunjungan.length > 15) {
